@@ -1,0 +1,38 @@
+.Header {
+  padding: 1.5em 0 1.5em 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .SocialNav {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    li {
+      padding: 0 0.6em 0 0;
+    }
+  }
+  .MainNav {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    text-transform: lowercase;
+    li {
+      padding: 0 0 0 1em;
+    }
+  }
+}

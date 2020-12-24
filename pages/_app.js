@@ -1,7 +1,17 @@
-import '../styles/globals.css'
+import { CartProvider } from 'use-shopping-cart'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+library.add(fas, fab)
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import '../assets/styles/globals.scss'
+
+function App({ Component, pageProps }) {
+  return (
+    <CartProvider currency="USD">
+      <Component {...pageProps} />
+    </CartProvider>
+  )
 }
 
-export default MyApp
+export default App

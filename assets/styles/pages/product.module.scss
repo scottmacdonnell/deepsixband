@@ -1,0 +1,26 @@
+.Product {
+  main {
+    .ProductContent {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 1em 1em;
+      .ProductImage {
+        grid-area: 1 / 1 / 2 / 2;
+        Image {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .ProductMeta {
+        grid-area: 1 / 2 / 2 / 3;
+        h1 {
+          margin: 1em 0;
+        }
+        p {
+          margin-bottom: 1.5em;
+        }
+      }
+    }
+  }
+}
