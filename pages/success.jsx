@@ -1,11 +1,14 @@
 import Head from 'next/head'
+import { useShoppingCart } from 'use-shopping-cart'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-export default function Index() {
+export default function Success() {
+  const { clearCart } = useShoppingCart()
+  clearCart()
   return (
-    <div>
+    <div className="Success">
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>Order Success - deepsix</title>
