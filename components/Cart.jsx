@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { loadStripe } from '@stripe/stripe-js'
 import { useShoppingCart } from 'use-shopping-cart'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,8 +12,7 @@ export default function Cart() {
     cartCount,
     totalPrice,
     incrementItem,
-    decrementItem,
-    removeItem
+    decrementItem
   } = useShoppingCart()
 
   const handleClick = async () => {
