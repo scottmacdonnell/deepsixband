@@ -7,6 +7,10 @@ You will need a .env.local file in the root of the directory containing the foll
 # Stripe keys
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=#TEST_KEY_HERE
 STRIPE_SECRET_KEY=#TEST_KEY_HERE
+
+# Spotify Keys
+SPOTIFY_CLIENT_ID=#TEST_KEY_HERE
+SPOTIFY_CLIENT_SECRET=#TEST_KEY_HERE
 ```
 
 To start the development server:
