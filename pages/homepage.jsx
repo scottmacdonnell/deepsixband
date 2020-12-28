@@ -29,13 +29,13 @@ export default function Index() {
           </div>
 
           <div className="Content">
-            <h1>shop</h1>
-            <ShopPreview />
-            <h1>tour</h1>
+            {/* <h1>shop</h1> */}
+            {/* <ShopPreview /> */}
+            {/* <h1>tour</h1>
             <h1>news</h1>
-            <h1>social</h1>
+            <h1>social</h1> */}
             <Twitter />
-            <h1>contact</h1>
+            {/* <h1>contact</h1> */}
           </div>
         </main>
       </div>
