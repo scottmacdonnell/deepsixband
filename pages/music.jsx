@@ -5,13 +5,12 @@ import Footer from '../components/Footer'
 import LatestRelease from '../components/LatestRelease'
 import ShopItems from '../components/ShopItems'
 
-export default function Index() {
+export default function Music() {
   return (
-    <div className="Index">
+    <div className="Music">
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="deepsix is an explosive new rock band hailing from the small-town suburbs of Ontario, Canada."/>
-        <title>deepsix</title>
+        <title>Music - deepsix</title>
       </Head>
 
       <div className="Page">
@@ -23,6 +22,7 @@ export default function Index() {
 
         <main>
           <div className="Content">
+            <h1>music</h1>
             <LatestRelease />
           </div>
         </main>

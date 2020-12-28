@@ -42,11 +42,11 @@ export default function Header() {
               <a>Index</a>
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link href="/music">
               <a>Music</a>
             </Link>
-          </li> */}
+          </li>
           {/* <li>
             <Link href="/news">
               <a>News</a>
