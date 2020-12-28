@@ -23,7 +23,16 @@ export default function Index() {
 
         <main>
           <div className="Content">
+            <h1>latest release</h1>
             <LatestRelease />
+          </div>
+
+          <div className="Content">
+            <h1>shop</h1>
+            <h1>tour</h1>
+            <h1>news</h1>
+            <h1>social</h1>
+            <h1>contact</h1>
           </div>
         </main>
       </div>
