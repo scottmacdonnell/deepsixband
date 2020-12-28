@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../components/Header/'
+import Footer from '../components/Footer/'
 import LatestRelease from '../components/LatestRelease'
 import ShopItems from '../components/ShopItems'
 

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import styles from '../assets/styles/components/Header.module.scss'
+import styles from './Header.module.scss'
 
 export default function Header() {
   return (

@@ -1,6 +1,8 @@
 import useSWR from 'swr'
 
-import styles from '../assets/styles/components/LatestRelease.module.scss'
+import LatestReleaseSkeleton from './LatestReleaseSkeleton/'
+
+import styles from './LatestRelease.module.scss'
 
 const fetcher = async (url) => {
   const res = await fetch(url)
@@ -15,7 +17,7 @@ const fetcher = async (url) => {
 export default function LatestRelease() {
   const { data, error } = useSWR(() => `/api/spotify/get-latest-release`, fetcher)
   if (error) return <div>{error.message}</div>
-  if (!data) return <div>Loading...</div>
+  if (!data) return <div><LatestReleaseSkeleton /></div>
   const embed = `https://open.spotify.com/embed/album/${data.album.id}`
   return (
     <div className={styles.LatestRelease}>

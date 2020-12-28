@@ -1,0 +1,25 @@
+@mixin LoadingAnimation {
+  animation-name: LoadingAnimation;
+  animation-duration: 2s;
+  animation-duration: infinite;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @keyframes LoadingAnimation {
+    0%   {background-color:#0f0f0f;}
+    50%  {background-color:#262626;}
+    100% {background-color:#0f0f0f;}
+  }
+}
+
+.TwitterSkeleton {
+  .TimelineSkeleton {
+    width: 300px;
+    height: 500px;
+    border-radius: 5px;
+    @include LoadingAnimation();
+  }
+}
+
+
+
+

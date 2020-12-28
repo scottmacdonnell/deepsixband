@@ -1,0 +1,71 @@
+@mixin LoadingAnimation {
+  animation-name: LoadingAnimation;
+  animation-duration: 2s;
+  animation-duration: infinite;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @keyframes LoadingAnimation {
+    0%   {background-color:#0f0f0f;}
+    50%  {background-color:#262626;}
+    100% {background-color:#0f0f0f;}
+  }
+}
+
+
+.ProductDisplaySkeleton {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1em 1em;
+  .ProductImage { grid-area: 1 / 1 / 2 / 2; }
+  .ProductMeta {
+    grid-area: 1 / 2 / 2 / 3;
+    h1 {
+      margin: 1em 0;
+    }
+    p {
+      margin-bottom: 1.5em;
+    }
+  }
+}
+
+.ImageSkeleton {
+  width: 500px;
+  height: 500px;
+  @include LoadingAnimation();
+}
+
+.TitleSkeleton {
+  margin-top: 40px;
+  width: 300px;
+  height: 80px;
+  @include LoadingAnimation();
+}
+
+.PriceSkeleton {
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  @include LoadingAnimation();
+}
+
+.DescriptionSkeleton {
+  margin-top: 20px;
+  width: 90%;
+  height: 100px;
+  @include LoadingAnimation();
+}
+
+.SelectSkeleton {
+  margin-top: 20px;
+  width: 70px;
+  height: 40px;
+  @include LoadingAnimation();
+}
+
+.ButtonSkeleton {
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  @include LoadingAnimation();
+}

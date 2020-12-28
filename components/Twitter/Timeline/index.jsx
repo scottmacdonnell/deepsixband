@@ -1,6 +1,6 @@
-export default function Twitter() {
+export default function Timeline() {
   return (
-    <div className="Twitter">
+    <div className="Timeline">
       <a class="twitter-timeline" 
         data-theme="dark" 
         href="https://twitter.com/deepsixca?ref_src=twsrc%5Etfw"
