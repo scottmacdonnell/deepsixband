@@ -2,7 +2,7 @@ import { loadStripe } from '@stripe/stripe-js'
 import { useShoppingCart } from 'use-shopping-cart'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import styles from '../assets/styles/components/Cart.module.scss'
+import styles from '../styles/components/Cart.module.scss'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 
