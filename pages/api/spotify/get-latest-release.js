@@ -1,6 +1,6 @@
 export default async (req, res) => {
   const authURL = 'https://accounts.spotify.com/api/token'
-  const reqURL = 'https://api.spotify.com/v1/artists/0BFG1QbcRKPny71AbK7Xrf/albums?include_groups=album%2Csingle&market=ES&limit=1'
+  const reqURL = `https://api.spotify.com/v1/artists/${process.env.SPOTIFY_URI}/albums?include_groups=album%2Csingle&market=ES&limit=1`
   
 
   const authString = new Buffer(`${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`)
