@@ -1,0 +1,41 @@
+.Songkick {
+  
+  .Show {
+    background: transparent;
+    margin:  1em 0;
+    padding: 1em;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    grid-template-areas:
+      "Date City BuyTickets"
+      "Venue City BuyTickets";
+      p, h3 {
+        margin: 0
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    .Date { 
+      grid-area: Date;
+      align-items: flex-start;
+    }
+    .Venue { 
+      grid-area: Venue;
+      align-items: flex-start;
+    }
+    .City {
+      grid-area: City;
+      align-items: center;
+    }
+    .BuyTickets {
+      grid-area: BuyTickets;
+      align-items: flex-end;
+    }
+  }
+}
