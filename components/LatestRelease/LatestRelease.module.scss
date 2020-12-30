@@ -1,5 +1,4 @@
 .LatestRelease {
-  padding: 2em 0;
   @media (max-width: 700px) {
     display: grid;
     grid-template-columns: 1fr;
@@ -20,7 +19,6 @@
         justify-content: center;
       }
       h1, p {
-        margin: 0;
         text-align: center;
       }
     }

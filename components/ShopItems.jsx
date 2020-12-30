@@ -3,7 +3,7 @@ import { formatCurrencyString } from 'use-shopping-cart'
 
 import { products } from '../data/products'
 
-import styles from '../assets/styles/components/ShopItems.module.scss'
+import styles from '../styles/components/ShopItems.module.scss'
 
 export default function ShopItems() {
   return (

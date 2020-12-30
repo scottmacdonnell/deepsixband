@@ -1,5 +1,5 @@
 .Header {
-  padding: 1.5em 0 1.5em 0;
+  padding: 2rem 0 0 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
@@ -22,7 +22,7 @@
     align-items: flex-start;
     align-content: flex-start;
     li {
-      padding: 0 0.6em 0 0;
+      padding: 0 0.6rem 0 0;
     }
   }
   .MainNav {
@@ -32,7 +32,7 @@
     align-content: flex-end;
     text-transform: lowercase;
     li {
-      padding: 0 0 0 1em;
+      padding: 0 0 0 0.75rem;
     }
   }
 }
