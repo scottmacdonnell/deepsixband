@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import Hero from '../components/Hero/'
-import HeroSkeleton from '../components/Hero/HeroSkeleton/'
 import Footer from '../components/Footer/'
 import LatestRelease from '../components/LatestRelease/'
 import ShopPreview from '../components/ShopPreview'
@@ -37,8 +36,8 @@ export default function Index() {
             
             {/* <LatestRelease /> */}
             <Songkick />
-            <FeaturedArticles id="News" />
             {/* <Twitter /> */}
+            <FeaturedArticles id="News" />
             <Newsletter />
           </div>
         </main>

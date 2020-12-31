@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import useSWR from 'swr'
 
+import SongkickSkeleton from './SongkickSkeleton/'
+
 import styles from './Songkick.module.scss'
 
 const fetcher = async (url) => {
@@ -16,7 +18,7 @@ const fetcher = async (url) => {
 export default function Songkick() {
   const { data, error } = useSWR(() => `/api/songkick/get-shows`, fetcher)
   if (error) return <div>{error.message}</div>
-  if (!data) return <p>Loading</p>
+  if (!data) return <div><SongkickSkeleton /></div>
   const { shows } = data
   return (
     <div className={styles.Songkick}>
