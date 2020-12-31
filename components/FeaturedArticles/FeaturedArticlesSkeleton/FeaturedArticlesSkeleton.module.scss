@@ -1,0 +1,49 @@
+@mixin LoadingAnimation {
+  animation-name: LoadingAnimation;
+  animation-duration: 2s;
+  animation-duration: infinite;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @keyframes LoadingAnimation {
+    0%   {background-color:#0f0f0f;}
+    50%  {background-color:#262626;}
+    100% {background-color:#0f0f0f;}
+  }
+}
+
+.FeaturedArticlesSkeleton {
+  margin:  1em 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
+  .Article:first-child {
+    background: transparent;
+    padding: 1em;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    grid-area: span 4 / span 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 1em;
+  }
+  .Article:nth-last-child(-n + 4) {
+    grid-area: span 1 / span 1;
+    padding: 1em;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px;
+    gap: 1em;
+  }
+  .ArticleImage {
+    grid-area: span 1;
+    @include LoadingAnimation;
+  }
+  .ArticleMeta {
+    grid-area: span 1;
+    @include LoadingAnimation;
+  }
+}

@@ -8,6 +8,7 @@ import ShopPreview from '../components/ShopPreview'
 import Twitter from '../components/Twitter/'
 import Songkick from '../components/Songkick/'
 import Newsletter from '../components/Newsletter/'
+import FeaturedArticles from '../components/FeaturedArticles/'
 
 export default function Index() {
   return (
@@ -30,13 +31,15 @@ export default function Index() {
             <h1>shop</h1>
             <ShopPreview />
             <h1>tour</h1>
-            <h1>news</h1>
+            
             <h1>social</h1> */}
 
-            <Songkick /> 
-            <LatestRelease />
-            <Twitter />
-            <Newsletter />
+            
+            {/* <LatestRelease /> */}
+            {/* <Twitter /> */}
+            <Songkick />
+            <FeaturedArticles id="News" />
+            {/* <Newsletter /> */}
           </div>
         </main>
       </div>
