@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 
 import HeroSkeleton from './HeroSkeleton/'
-import Header from '../Header/'
+import Nav from '../Nav/'
 
 import styles from './Hero.module.scss'
 
@@ -23,10 +23,10 @@ export default function Hero() {
   return (
     <div className={styles.Hero}>
       <div className="Content">
-        <Header />
-        <div className={styles.Artist}>
-          <div className={styles.Meta}>
-            <div className={styles.Type}>
+        <Nav />
+        <div className={styles.HeroArtist}>
+          <div className={styles.HeroMeta}>
+            <div className={styles.HeroType}>
               <p>{artist.type}</p>
               <svg role="img" focusable="false" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true" class="Svg-sc-1usfroi-0 epEIZP">
                 <circle cx="12" cy="12" r="9.5" fill="#509bf5" stroke="#509bf5"/>
@@ -36,10 +36,7 @@ export default function Hero() {
             <h1>{artist.name}</h1>
           </div>
 
-          <div className={styles.Stats}>
-            <p>popularity</p>
-            <p>{artist.popularity}</p>
-            <br/>
+          <div className={styles.HeroStats}>
             <p>streams</p>
             <p>{artist.streams}</p>
             <br/>

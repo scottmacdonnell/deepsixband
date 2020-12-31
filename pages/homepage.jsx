@@ -3,11 +3,13 @@ import Head from 'next/head'
 import Hero from '../components/Hero/'
 import Footer from '../components/Footer/'
 import LatestRelease from '../components/LatestRelease/'
-import ShopPreview from '../components/ShopPreview'
+import ShopPreview from '../components/ShopPreview/'
 import Twitter from '../components/Twitter/'
 import Songkick from '../components/Songkick/'
 import Newsletter from '../components/Newsletter/'
 import FeaturedArticles from '../components/FeaturedArticles/'
+import Test from '../components/Test/'
+import Releases from '../components/Releases/'
 
 export default function Index() {
   return (
@@ -24,21 +26,14 @@ export default function Index() {
         </header>
         <main>
           <div className="Content">
-          {/* </div>
-
-          <div className="Content">
-            <h1>shop</h1>
+            {/* <Test /> */}
+            <Releases amount="3" />
             <ShopPreview />
-            <h1>tour</h1>
-            
-            <h1>social</h1> */}
-
-            
-            {/* <LatestRelease /> */}
             <Songkick />
-            {/* <Twitter /> */}
             <FeaturedArticles id="News" />
             <Newsletter />
+            {/* <Twitter />
+            <LatestRelease /> */}
           </div>
         </main>
       </div>

@@ -1,0 +1,42 @@
+.Nav {
+  padding: 2rem 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  .SocialNav {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    li {
+      padding: 0 0.6rem 0 0;
+    }
+  }
+  .MainNav {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    text-transform: lowercase;
+    li {
+      padding: 0 0 0 0.75rem;
+    }
+  }
+  a:hover {
+    transition:all 0.1s ease;
+    color: #5f5f5f;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

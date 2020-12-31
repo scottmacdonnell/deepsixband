@@ -1,4 +1,4 @@
-import Header from '../../Header/'
+import Header from '../../Nav'
 
 import styles from './HeroSkeleton.module.scss'
 
@@ -7,16 +7,15 @@ export default function HeroSkeleton() {
     <div className={styles.HeroSkeleton}>
       <div className="Content">
         <Header />
-        <div className={styles.Artist}>
-          <div className={styles.Meta}>
-            <div className={styles.TypeSkeleton}/>
-            <div className={styles.NameSkeleton}/>
+        <div className={styles.HeroArtistSkeleton}>
+          <div className={styles.HeroMetaSkeleton}>
+            <div className={styles.HeroTypeSkeleton}/>
+            <div className={styles.HeroNameSkeleton}/>
           </div>
 
-          <div className={styles.Stats}>
-            <div className={styles.StatSkeleton}/>
-            <div className={styles.StatSkeleton}/>
-            <div className={styles.StatSkeleton}/>
+          <div className={styles.HeroStatsSkeleton}>
+            <div className={styles.HeroStatSkeleton}/>
+            <div className={styles.HeroStatSkeleton}/>
           </div>
         </div>
       </div>

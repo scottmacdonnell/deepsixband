@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Header from '../components/Header/'
 import Footer from '../components/Footer/'
 import LatestRelease from '../components/LatestRelease'
-import ShopItems from '../components/ShopItems'
+import Releases from '../components/Releases/'
 
 export default function Music() {
   return (
@@ -15,15 +15,17 @@ export default function Music() {
 
       <div className="Page">
         <header>
-          <div className="Content">
-            <Header />
-          </div>
+          <Header 
+            page="Music"
+          />
         </header>
 
         <main>
           <div className="Content">
-            <h1>music</h1>
             <LatestRelease />
+            <Releases 
+              amount="4"
+            />
           </div>
         </main>
       </div>

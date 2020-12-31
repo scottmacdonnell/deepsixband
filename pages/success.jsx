@@ -16,9 +16,9 @@ export default function Success() {
 
       <div className="Page">
         <header>
-          <div className="Content">
-            <Header />
-          </div>
+          <Header 
+            page="Success"
+          />
         </header>
 
         <main>

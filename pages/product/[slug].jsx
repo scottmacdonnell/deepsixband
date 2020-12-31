@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import Header from '../../components/Header/'
+import Nav from '../../components/Nav/'
 import Footer from '../../components/Footer/'
 import ProductDisplay from '../../components/ProductDisplay/'
 
@@ -17,7 +17,7 @@ export default function Product() {
       <div className="Page">
         <header>
           <div className="Content">
-            <Header />
+            <Nav />
           </div>
         </header>
 

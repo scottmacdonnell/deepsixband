@@ -13,9 +13,9 @@ export default function Checkout() {
       </Head>
       <div className="Page">
         <header>
-          <div className="Content">
-            <Header />
-          </div>
+          <Header 
+            page="Cart"
+          />
         </header>
 
         <main>

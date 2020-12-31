@@ -15,14 +15,13 @@ export default function Shop() {
       
       <div className="Page">
         <header>
-          <div className="Content">
-            <Header />
-          </div>
+          <Header 
+            page="Shop"
+          />
         </header>
 
         <main>
           <div className="Content">
-            <h1>Shop</h1>
             <ShopItems />
           </div>
         </main>
