@@ -7,9 +7,9 @@ import { articles } from '../../data/articles'
 
 import styles from './FeaturedArticles.module.scss'
 
-export default function FeaturedArticles() {
+export default function FeaturedArticles({ id }) {
   return (
-    <div className={styles.FeaturedArticles}>
+    <div className={styles.FeaturedArticles} id={id}>
       {articles.map((article) => {
         const { 
           title,

@@ -47,11 +47,11 @@ export default function Header() {
               <a>Music</a>
             </Link>
           </li>
-          {/* <li>
-            <Link href="/news">
+          <li>
+            <Link href="#News">
               <a>News</a>
             </Link>
-          </li> */}
+          </li>
           <li>
             <Link href="/shop">
               <a>Shop</a>
