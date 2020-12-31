@@ -1,29 +1,15 @@
 .Newsletter {
-  margin:  1em 0;
   display: grid;
   gap: 1em;
-  background: transparent;
-  padding: 1em;
-  border: 1px solid #333333;
-  border-radius: 5px;
   .NewsletterMeta { 
-    margin: 0.5em 0;
     grid-area: span 1;
-    flex-direction: column;
-    justify-content: flex-start;
   }
   .NewsletterForm {
     grid-area: span 1; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-  }
-  h2 {
-    margin-top: 0;
-  }
-  p {
-    margin-bottom: 0;
+    align-items: center;
   }
   form {
     display: flex;
@@ -31,7 +17,7 @@
     label {
       background-color: transparent;
       padding: 0.75em;
-      width: 17.5em;
+      width: 15rem;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -87,9 +73,6 @@
       justify-content: center;
       align-items: center;
     }
-    form {
-      margin: 0 0 1em 0;
-    }
   }
   @media (min-width: 700px) {
     grid-template-columns: 3fr 2fr;
@@ -104,3 +87,4 @@
     }
   }
 }
+

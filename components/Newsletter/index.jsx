@@ -6,8 +6,8 @@ export default function Newsletter() {
   return (
     <div className={styles.Newsletter}>
       <div className={styles.NewsletterMeta}> 
-        <h2>Next.js is getting better every day — don’t miss out on all the action.</h2>
-        <p>Join the Next.js newsletter and stay updated on new releases and features, guides, and case studies.</p>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dolore aperiam non quod.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nobis aut nulla eum praesentium magni quae maiores?</p>
       </div>
       <div className={styles.NewsletterForm}>
         <form>

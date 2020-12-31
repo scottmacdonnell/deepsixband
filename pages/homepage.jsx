@@ -36,10 +36,10 @@ export default function Index() {
 
             
             {/* <LatestRelease /> */}
-            {/* <Twitter /> */}
             <Songkick />
             <FeaturedArticles id="News" />
-            {/* <Newsletter /> */}
+            {/* <Twitter /> */}
+            <Newsletter />
           </div>
         </main>
       </div>
