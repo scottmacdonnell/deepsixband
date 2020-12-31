@@ -49,7 +49,6 @@ export default function Releases({ amount }) {
                       <div>
                         <a>
                           <h2>{release.name}</h2>
-                          <p>{release.album_type}</p>
                         </a>
                       </div>
                     </a>
