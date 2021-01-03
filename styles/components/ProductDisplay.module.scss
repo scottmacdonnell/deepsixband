@@ -1,11 +1,4 @@
 .ProductDisplay {
-  button {
-    background-color: transparent;
-    color: #f1f1f1;
-    border: 1px solid #333333;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-  }
   .ProductDisplayContent {
     display: grid;
     grid-template-columns: 1fr;
@@ -20,5 +13,96 @@
   }
   @media (max-width: 540px) {
     margin: 1.5em 0 0 0;
+  }
+}
+
+.AddToCart {
+  $offset: 187;
+  $duration: 1.4s;
+  .AddToCartButton {
+    color: #f1f1f1;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8em;
+    height: 2.75em;
+  }
+  .AddToCartButton:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .AddToCartButtonReady {
+    background-color: transparent;
+    .AddToCartButtonText {
+      display: inline;
+    }
+    .AddToCartButtonSpinnerContainer {
+      display: none;
+    }
+    .AddToCartButtonCheck {
+      display: none;
+    }
+  }
+  .AddToCartButtonReady:hover {
+    background-color: #007aff;
+  }
+  .AddToCartButtonActive {
+    background-color: #007aff;
+    .AddToCartButtonText {
+      display: none;
+    }
+    .AddToCartButtonSpinnerContainer {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .AddToCartButtonSpinner {
+        display: inline;
+        width: 16px;
+        height: 16px;
+        clear: both;
+        margin: 10px auto;
+        border: 2px rgba(#f1f1f1, 0.25) solid;
+        border-top: 2px rgba(#f1f1f1, 1) solid;
+        border-radius: 50%;
+        -webkit-animation: spCircRot .6s infinite linear;
+        animation: spCircRot .6s infinite linear;
+        @-webkit-keyframes spCircRot {
+          from { -webkit-transform: rotate(0deg); }
+          to { -webkit-transform: rotate(359deg); }
+        }
+        @keyframes spCircRot {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(359deg); }
+        }
+      }
+    }
+    .AddToCartButtonCheck {
+      display: none;
+    }
+  }
+  .AddToCartButtonAfter {
+    background-color: #34c759;
+    .AddToCartButtonText {
+      display: none;
+    }
+    .AddToCartButtonSpinner {
+      display: none;
+    }
+    .AddToCartButtonCheck {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        stroke-width: 2px;
+      }
+    }
   }
 }

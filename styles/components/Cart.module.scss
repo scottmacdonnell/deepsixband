@@ -79,4 +79,100 @@
       margin: 1.5em 0 0 0;
     }
   }
+  .CartContentOverview {
+    padding: 1em 0;
+    button {
+      background-color: #007aff;
+      color: #f1f1f1;
+      border: 1px solid #333333;
+      margin: 1em 0;
+      width: 100%;
+      height: 2.5em;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .CartContentOverviewMeta {
+      color: #f1f1f1;
+      text-align: right;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      border-top: 1px solid #333333;
+      border-bottom: 1px solid #333333;
+      padding: 1em 0;
+    }
+  }
+}
+
+.CheckoutButton {
+  $offset: 187;
+  $duration: 1.4s;
+  .CheckoutButtonStyle {
+    color: #f1f1f1;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .CheckoutButtonStyle:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .CheckoutButtonStyleReady {
+    background-color: #007aff;
+    .CheckoutButtonText {
+      display: inline;
+    }
+    .CheckoutButtonSpinner {
+      display: none;
+    }
+  }
+  .CheckoutButtonStyleActive {
+    background-color: #007aff;
+    .CheckoutButtonText {
+      display: none;
+      margin: -0.1em 0 0 0;
+      p {
+        line-height: 1em;
+      }
+    }
+    .CheckoutButtonSpinnerContainer {
+      margin-top: 0.1em;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .CheckoutButtonSpinner {
+        display: inline;
+        width: 16px;
+        height: 16px;
+        clear: both;
+        margin: 10px auto;
+        border: 2px rgba(#f1f1f1, 0.25) solid;
+        border-top: 2px rgba(#f1f1f1, 1) solid;
+        border-radius: 50%;
+        -webkit-animation: spCircRot .6s infinite linear;
+        animation: spCircRot .6s infinite linear;
+        @-webkit-keyframes spCircRot {
+          from { -webkit-transform: rotate(0deg); }
+          to { -webkit-transform: rotate(359deg); }
+        }
+        @keyframes spCircRot {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(359deg); }
+        }
+      }
+    }
+  }
 }

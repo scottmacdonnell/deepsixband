@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import { loadStripe } from '@stripe/stripe-js'
 import { useShoppingCart } from 'use-shopping-cart'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,43 +15,6 @@ export default function Cart() {
     incrementItem,
     decrementItem
   } = useShoppingCart()
-
-  const handleClick = async () => {
-    const stripe = await stripePromise;
-
-    let lineItems = []
-    for (const itemId in cartDetails) {
-      if (cartDetails[itemId].price_id) {
-        lineItems.push({ price: cartDetails[itemId].price_id, quantity: cartDetails[itemId].quantity })
-      }
-    }
-
-    const cart = {
-      line_items: lineItems
-    }
-
-    console.log(cart)
-
-    const res = await fetch(`/api/stripe/checkout-session`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8'
-      },
-      body: JSON.stringify(cart)
-    })
-
-    const session = await res.json()
-
-    const result = await stripe.redirectToCheckout({
-      sessionId: session.session.id,
-    })
-
-    if (result.error) {
-      // If `redirectToCheckout` fails due to a browser or network
-      // error, display the localized error message to your customer
-      // using `result.error.message`.
-    }
-  }
 
   if (Object.keys(cartDetails).length === 0) {
     return (
@@ -105,52 +69,86 @@ export default function Cart() {
             })}
 
           </div>
-        </div>
 
-
-        {/* 
-        {Object.keys(cartDetails).map((item) => {
-          const cartItem = cartDetails[item]
-          const { name, description, id, quantity, price, currency, image } = cartItem
-          return (
-            <div className={styles.Item}>
-              <div className={styles.ItemImage}>
-                <img src={image} alt="Product Image" />
-              </div>
-              <div className={styles.ItemMeta}>
-                <div className={styles.ItemName}>
-                  <p><b>{name}</b></p>
-                </div>
-                <div className={styles.ItemDescription}>
-                  <p>{description}</p>
-                </div>
-                <div className={styles.ItemPrice}>
-                  <p><b>${(price/100).toFixed(2)}</b></p>
-                </div>
-                <div className={styles.ItemFunctions}>
-                  <button onClick={() => incrementItem(id)}>
-                    <FontAwesomeIcon icon={["fas", "plus"]} />
-                  </button>
-                  <p>{quantity}</p>
-                  <button onClick={() => decrementItem(id)}>
-                    <FontAwesomeIcon icon={["fas", "minus"]} />
-                  </button>
-                </div>
-              </div>
+          <div className={styles.CartContentOverview}>
+            <div className={styles.CartContentOverviewMeta}>
+              <p>Product Quantity: <b>{cartCount}</b></p>
+              <p>Total Price: <b>${(totalPrice/100).toFixed(2)}</b></p>
             </div>
-          )
-        })}
-        <div className={styles.CartOverview}>
-          <p>Product Quantity: {cartCount}</p>
-          <p>Total Price: ${(totalPrice/100).toFixed(2)}</p>
-          <button
-            role="link" 
-            onClick={handleClick}
-          >
-            Checkout
-          </button>
-        </div> */}
+            <CheckoutButton />
+          </div>
+        </div>
       </div>
     )
   }
+}
+
+function CheckoutButton() {
+  const [buttonStateReady, setButtonStateReady] = useState(true)
+  const [buttonStateActive, setButtonStateActive] = useState(false)
+
+  const {
+    cartDetails,
+    cartCount,
+    totalPrice,
+    incrementItem,
+    decrementItem
+  } = useShoppingCart()
+
+  const handleCheckout = async () => {
+    setButtonStateActive(true)
+    setButtonStateReady(false)
+    const stripe = await stripePromise;
+
+    let lineItems = []
+    for (const itemId in cartDetails) {
+      if (cartDetails[itemId].price_id) {
+        lineItems.push({ price: cartDetails[itemId].price_id, quantity: cartDetails[itemId].quantity })
+      }
+    }
+
+    const cart = {
+      line_items: lineItems
+    }
+
+    console.log(cart)
+
+    const res = await fetch(`/api/stripe/checkout-session`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8'
+      },
+      body: JSON.stringify(cart)
+    })
+
+    const session = await res.json()
+
+    const result = await stripe.redirectToCheckout({
+      sessionId: session.session.id,
+    })
+
+    if (result.error) {
+      // If `redirectToCheckout` fails due to a browser or network
+      // error, display the localized error message to your customer
+      // using `result.error.message`.
+    }
+  }
+
+  return (
+    <div className={styles.CheckoutButton}>
+      <button
+        role="link" 
+        className={`${styles.CheckoutButtonStyle} ${buttonStateReady ? styles.CheckoutButtonStyleReady : ''} ${buttonStateActive ? styles.CheckoutButtonStyleActive : ''}`}
+        onClick={() => handleCheckout()}
+      >
+        <div className={styles.CheckoutButtonText}>
+          <p>Checkout</p>
+        </div>
+
+        <div className={styles.CheckoutButtonSpinnerContainer}>
+          <div className={styles.CheckoutButtonSpinner} />
+        </div>
+      </button>
+    </div>
+  )
 }
