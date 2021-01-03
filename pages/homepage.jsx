@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Hero from '../components/Hero'
 import Releases from '../components/Releases'
 import Songkick from '../components/Songkick'
+import Social from '../components/Social'
 import FeaturedArticles from '../components/FeaturedArticles'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
@@ -26,6 +27,7 @@ export default function Index() {
           <Releases amount="3" />
           <Songkick />
           <FeaturedArticles />
+          <Social />
           {/* <Newsletter /> */}
         </main>
 
