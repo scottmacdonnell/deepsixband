@@ -1,7 +1,8 @@
 import Head from 'next/head'
 
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Releases from '../components/Releases'
 
 export default function Checkout() {
   return (
@@ -13,11 +14,13 @@ export default function Checkout() {
       <div className="Page">
         
         <header>
-          <Navbar />
+          <Header 
+            name="Music"
+          />
         </header>
 
         <main>
-          <h1>Music</h1>
+          <Releases />
         </main>
 
       </div>
