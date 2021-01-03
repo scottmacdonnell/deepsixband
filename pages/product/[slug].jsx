@@ -13,12 +13,12 @@ export default function Product() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>Product - deepsix</title>
       </Head>
+      
+      <header>
+        <Navbar />
+      </header>
 
       <div className="Page">
-        <header>
-          <Navbar />
-        </header>
-
         <main>
           <div className="Content">
             <ProductDisplay

@@ -9,10 +9,49 @@
     }
     .ProductDisplayContentMeta {
       grid-area: span 1;
+      display: inline;
+      .ProductDisplayContentMetaProductOptions {
+        display: grid;
+        grid-template-columns: auto 20px;
+        grid-auto-rows: auto;
+        padding: 0.5em;
+        margin: 0.5em 0;
+        border: 1px solid #333333;
+        border-radius: 5px;
+        width: 8em;
+        .ProductDisplayContentMetaProductOptionsSelect {
+          grid-area: span 1;
+          display: flex;
+          margin: 0 0 0 0.25em;
+          justify-content: flex-start;
+          align-items: center;
+          select{
+            margin: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            outline: 0;
+            border: none;
+            box-shadow: none;
+            background: transparent;
+            color: #F1F1F1;
+          }
+        }
+        .ProductDisplayContentMetaProductOptionsIcon {
+          grid-area: span 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            margin-top: 0.1em;
+          }
+        }
+      }
     }
   }
   @media (max-width: 540px) {
-    margin: 1.5em 0 0 0;
+    margin: 2em 0;
   }
 }
 

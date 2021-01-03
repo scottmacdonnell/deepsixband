@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import useSWR from 'swr'
 import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from '../styles/components/ProductDisplay.module.scss'
 
@@ -32,21 +33,21 @@ export default function ProductDisplay({ slug }) {
       <Head>
         <title>{data.name} - deepsix</title>
       </Head>
-      <div className="Content">
-        <div className={styles.ProductDisplayContent}>
-          <div className={styles.ProductDisplayContentImage}>
-            <img src={data.image} alt="Product Image"/>
-          </div>
+      <div className={styles.ProductDisplayContent}>
+        <div className={styles.ProductDisplayContentImage}>
+          <img src={data.image} alt="Product Image"/>
+        </div>
 
-          <div className={styles.ProductDisplayContentMeta}>
-            <h1>{data.name}</h1>
-            <h2>{price}</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-              do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-              laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div className={styles.ProductDisplayContentMeta}>
+          <h1>{data.name}</h1>
+          <h2>{price}</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+            do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat. </p>
 
-            <div className="ProductOptions">
+          <div className={styles.ProductDisplayContentMetaProductOptions}>
+            <div class={styles.ProductDisplayContentMetaProductOptionsSelect}>
               <select name="product-options" id="product-options">
                 {Object.keys(data.attribute).map((attribute) => {
                   const productAttribute = data.attribute[attribute]
@@ -56,11 +57,15 @@ export default function ProductDisplay({ slug }) {
               </select>
             </div>
 
-            <div className={styles.ProductDisplayContentMetaAddToCart}>
-              <AddToCart
-                data={data}
-              />
+            <div class={styles.ProductDisplayContentMetaProductOptionsIcon}>
+              <FontAwesomeIcon icon={["fas", "chevron-down"]} />
             </div>
+          </div>
+
+          <div className={styles.ProductDisplayContentMetaAddToCart}>
+            <AddToCart
+              data={data}
+            />
           </div>
         </div>
       </div>
