@@ -1,0 +1,45 @@
+// karl damus
+// corresponds to heroAlt.jsx in 'root/components'
+
+@mixin LoadingAnimation {
+    animation-name: LoadingAnimation;
+    animation-duration: 2s;
+    animation-duration: infinite;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    @keyframes LoadingAnimation {
+      0%   {background-color:#0f0f0f;}
+      50%  {background-color:#262626;}
+      100% {background-color:#0f0f0f;}
+    }
+}
+
+.HeroAlt {
+  height: 100vh;
+  width: 100%;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+  font-family: 'Monument';
+  
+}
+
+.HeroAltContentBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: url("../../public/images/large/hero-asset.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-position-y: -50px;
+
+  .logo {
+    align-self: center;
+    text-align: center;
+    margin: 0 auto 10vh;
+    font-size: 3em;
+  }
+}
