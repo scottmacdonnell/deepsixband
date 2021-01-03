@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import Nav from '../../components/Nav/'
-import Footer from '../../components/Footer/'
-import ProductDisplay from '../../components/ProductDisplay/'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import ProductDisplay from '../../components/ProductDisplay'
 
 export default function Product() {
   const { query } = useRouter()
@@ -16,9 +16,7 @@ export default function Product() {
 
       <div className="Page">
         <header>
-          <div className="Content">
-            <Nav />
-          </div>
+          <Navbar />
         </header>
 
         <main>

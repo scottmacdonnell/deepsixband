@@ -55,13 +55,60 @@ export default function Cart() {
   if (Object.keys(cartDetails).length === 0) {
     return (
       <div className={styles.Cart}>
-        <h1>No items in cart</h1>
+        <div className="Content">
+          <div className={styles.CartContent}>
+            <h1>No items in cart</h1>
+          </div>
+        </div>
       </div>
     )
   } else {
     return (
       <div className={styles.Cart}>
-        <h1>Review order</h1>
+        
+        <div className="Content">
+
+          <div className={styles.CartContent}>
+
+            <h1>Review Order</h1>
+
+            {Object.keys(cartDetails).map((item) => {
+              const cartItem = cartDetails[item]
+              const { name, description, id, quantity, price, currency, image } = cartItem
+              return (
+                <div className={styles.CartContentItem}>
+                  <div className={styles.CartContentItemImage}>
+                    <img src={image} alt="Product Image" />
+                  </div>
+                  <div className={styles.CartContentItemMeta}>
+                    <div className={styles.CartContentItemMetaName}>
+                      <p><b>{name}</b></p>
+                    </div>
+                    <div className={styles.CartContentItemMetaDescription}>
+                      <p>{description}</p>
+                    </div>
+                    <div className={styles.CartContentItemMetaPrice}>
+                      <p><b>${(price/100).toFixed(2)}</b></p>
+                    </div>
+                    <div className={styles.CartContentItemMetaFunctions}>
+                      <button onClick={() => incrementItem(id)}>
+                        <FontAwesomeIcon icon={["fas", "plus"]} />
+                      </button>
+                      <p>{quantity}</p>
+                      <button onClick={() => decrementItem(id)}>
+                        <FontAwesomeIcon icon={["fas", "minus"]} />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+
+          </div>
+        </div>
+
+
+        {/* 
         {Object.keys(cartDetails).map((item) => {
           const cartItem = cartDetails[item]
           const { name, description, id, quantity, price, currency, image } = cartItem
@@ -83,12 +130,10 @@ export default function Cart() {
                 <div className={styles.ItemFunctions}>
                   <button onClick={() => incrementItem(id)}>
                     <FontAwesomeIcon icon={["fas", "plus"]} />
-                    {/* <p><b>+</b></p> */}
                   </button>
                   <p>{quantity}</p>
                   <button onClick={() => decrementItem(id)}>
                     <FontAwesomeIcon icon={["fas", "minus"]} />
-                    {/* <p><b>-</b></p> */}
                   </button>
                 </div>
               </div>
@@ -104,7 +149,7 @@ export default function Cart() {
           >
             Checkout
           </button>
-        </div>
+        </div> */}
       </div>
     )
   }

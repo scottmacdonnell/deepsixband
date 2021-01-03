@@ -1,15 +1,11 @@
 import Head from 'next/head'
 
-import Hero from '../components/Hero/'
-import Footer from '../components/Footer/'
-import LatestRelease from '../components/LatestRelease/'
-import ShopPreview from '../components/ShopPreview/'
-import Twitter from '../components/Twitter/'
-import Songkick from '../components/Songkick/'
-import Newsletter from '../components/Newsletter/'
-import FeaturedArticles from '../components/FeaturedArticles/'
-import Test from '../components/Test/'
-import Releases from '../components/Releases/'
+import Hero from '../components/Hero'
+import Releases from '../components/Releases'
+import Songkick from '../components/Songkick'
+import FeaturedArticles from '../components/FeaturedArticles'
+import Newsletter from '../components/Newsletter'
+import Footer from '../components/Footer'
 
 export default function Index() {
   return (
@@ -21,24 +17,23 @@ export default function Index() {
       </Head>
 
       <div className="Page">
+      
         <header>
           <Hero />
         </header>
+
         <main>
-          <div className="Content">
-            {/* <Test /> */}
-            <Releases amount="3" />
-            <ShopPreview />
-            <Songkick />
-            <FeaturedArticles id="News" />
-            <Newsletter />
-            {/* <Twitter />
-            <LatestRelease /> */}
-          </div>
+          <Releases amount="3" />
+          <Songkick />
+          <FeaturedArticles />
+          {/* <Newsletter /> */}
         </main>
+
       </div>
-      
-      <Footer />
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }

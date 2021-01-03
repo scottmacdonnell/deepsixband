@@ -1,7 +1,7 @@
 export default async (req, res) => {
   let result = []
   let i
-  const reqURL = `https://api.songkick.com/api/3.0/artists/1118551/calendar.json?apikey=${process.env.SONGKICK_KEY}&per_page=5`
+  const reqURL = `https://api.songkick.com/api/3.0/artists/8723059/calendar.json?apikey=${process.env.SONGKICK_KEY}&per_page=5`
 
   const reqResponse = await fetch(reqURL)
 

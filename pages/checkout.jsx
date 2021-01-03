@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import Header from '../components/Header/'
-import Footer from '../components/Footer/'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import Cart from '../components/Cart'
 
 export default function Checkout() {
@@ -12,20 +12,20 @@ export default function Checkout() {
         <title>Checkout - deepsix</title>
       </Head>
       <div className="Page">
+        
         <header>
-          <Header 
-            page="Cart"
-          />
+          <Navbar />
         </header>
 
         <main>
-          <div className="Content">
-            <Cart />
-          </div>
+          <Cart />
         </main>
+
       </div>
       
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }

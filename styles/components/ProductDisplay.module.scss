@@ -1,0 +1,24 @@
+.ProductDisplay {
+  button {
+    background-color: transparent;
+    color: #f1f1f1;
+    border: 1px solid #333333;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+  }
+  .ProductDisplayContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 0.5em;
+    .ProductDisplayContentImage {
+      grid-area: span 1;
+    }
+    .ProductDisplayContentMeta {
+      grid-area: span 1;
+    }
+  }
+  @media (max-width: 540px) {
+    margin: 1.5em 0 0 0;
+  }
+}

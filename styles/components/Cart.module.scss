@@ -1,73 +1,82 @@
 .Cart {
-  // background-color: aqua;
-  .Item {
-    margin: 1em 0;
+  .CartContent {
     display: grid;
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: 100px;
-    gap: 1em 1em;
-    grid-template-areas:
-      "ItemImage ItemMeta";
-    .ItemImage { 
-      grid-area: ItemImage;
-      img {
-        width: 100px;
-        height: 100px;
-      }
-    }
-    .ItemMeta {
-      grid-area: ItemMeta;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 0.5em;
+    .CartContentItem{
+      grid-area: span 1;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 1em 1em;
-      grid-template-areas:
-        "ItemName ItemPrice"
-        "ItemDescription ItemFunctions";
-      .ItemName { grid-area: ItemName; }
-      .ItemDescription { 
-        grid-area: ItemDescription;
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        p {
-          margin: 0;
+      grid-template-columns: 100px 1fr;
+      grid-template-rows: 100px;
+      gap: 0.5em;
+      .CartContentItemImage {
+        grid-area: span 1;
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 5px;
         }
       }
-      .ItemPrice { 
-        grid-area: ItemPrice;
-        text-align: right;
-      }
-      .ItemFunctions { 
-        grid-area: ItemFunctions;
-        display: inline-flex;
-        flex-grow: none;
-        flex-shrink: none;
-        justify-content: flex-end;
-        align-items: center;
-        p {
-          padding: 0 1em;
-          margin: 0;
+      .CartContentItemMeta {
+        grid-area: span 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.5em;
+        grid-template-areas:
+          "CartContentItemMetaName CartContentItemMetaPrice"
+          "CartContentItemMetaDescription CartContentItemMetaFunctions";
+        .CartContentItemMetaName {
+          grid-area: CartContentItemMetaName;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
         }
-        button {
-          padding: 0.5em;
-          border: none;
-          border-radius: 4px;
-          background-color: none;
+        .CartContentItemMetaDescription {
+          grid-area: CartContentItemMetaDescription;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          p {
+            margin: 0;
+          }
+        }
+        .CartContentItemMetaPrice {
+          grid-area: CartContentItemMetaPrice;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+        }
+        .CartContentItemMetaFunctions {
+          grid-area: CartContentItemMetaFunctions;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          p {
+            padding: 0 1em;
+            margin: 0;
+          }
+          button {
+            background-color: transparent;
+            color: #f1f1f1;
+            border: 1px solid #333333;
+            width: 2.5em;
+            height: 2.5em;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
         }
       }
     }
-  }
-  .CartOverview {
-    padding-top: 2em;
-    text-align: right;
-    button {
-      font-size: large;
-      border: none;
-      border-radius: 4px;
-      background-color: #e4e4e4;
-      padding: 0.5em 1em;
+    @media (max-width: 540px) {
+      margin: 1.5em 0 0 0;
     }
   }
 }

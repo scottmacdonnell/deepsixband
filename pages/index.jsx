@@ -9,19 +9,8 @@ export default function Index() {
         <title>deepsix</title>
       </Head>
       <style jsx>{`
-        :global(html,body) {
-          margin: 0;
-          padding: 0;
-          height: 100%;
-        }
-
-        :global(body) {
-          font-size: calc(10px + 1vmin);
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-            'Droid Sans', 'Helvetica Neue', sans-serif;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-
+        main {
+          height: 90vh;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -30,13 +19,19 @@ export default function Index() {
           background-color: #0f0f0f;
           color: #f0f0f0;
         }
-
-        .content {
-          padding: 0 32px;
+        footer {
+          padding: 1em 0;
+          text-align:center;
         }
       `}</style>
-
-      <p>we're joining the club, see ya in 2021.</p>
+      <main className="Landing">
+        <p>new year, we'll be back soon.</p>
+      </main>
+      <footer>
+        <div className="Content">
+          <p>listen before those of you come and attack me for mentioning the word 'soon' i'm sorry, okay? 😅</p>
+        </div>
+      </footer>
 
     </div>
   )
