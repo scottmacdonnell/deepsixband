@@ -24,7 +24,7 @@ export default function LatestRelease() {
         <div className={styles.LatestReleaseContent}>
           <div className={styles.LatestReleaseContentAlbumArt}>
             <Link href={data.album.url}>
-              <a><img src={data.album.image_large.url} alt=""/></a>
+              <a><img src={data.album.image_medium.url} alt=""/></a>
             </Link>
             
           </div>
