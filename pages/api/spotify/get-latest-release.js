@@ -45,6 +45,7 @@ export default async (req, res) => {
       image_large: data.images[0],
       image_medium: data.images[1],
       image_small: data.images[2],
+      url: data.external_urls.spotify,
       id: data.id
     }
   })
