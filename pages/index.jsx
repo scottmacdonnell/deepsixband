@@ -29,7 +29,7 @@ export default function Index() {
       </main>
       <footer>
         <div className="Content">
-          <p>listen before those of you come and attack me for mentioning the word 'soon' i'm sorry, okay? 😅</p>
+          <p>listen before any of you come and attack me for mentioning the word 'soon' i'm sorry, okay? 😅</p>
         </div>
       </footer>
 
