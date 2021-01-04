@@ -2,7 +2,6 @@ import Head from 'next/head'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import LatestRelease from '../components/LatestRelease'
 import Releases from '../components/Releases'
 
 export default function Checkout() {
@@ -21,7 +20,6 @@ export default function Checkout() {
         </header>
 
         <main>
-          <LatestRelease />
           <Releases />
         </main>
 
