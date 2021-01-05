@@ -7,6 +7,7 @@ import Songkick from '../components/Songkick'
 import Social from '../components/Social'
 import FeaturedArticles from '../components/FeaturedArticles'
 import Newsletter from '../components/Newsletter'
+import ShopItems from '../components/ShopItems'
 import Footer from '../components/Footer'
 
 export default function Index() {
@@ -25,9 +26,10 @@ export default function Index() {
         </header>
 
         <main>
+          {/* <ShopItems /> */}
           <LatestRelease />
           <Releases amount="3" />
-          <Songkick />
+          {/* <Songkick /> */}
           <FeaturedArticles />
           <Social />
           {/* <Newsletter /> */}
