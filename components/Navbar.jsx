@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link'
+import { useShoppingCart } from 'use-shopping-cart'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from '../styles/components/Navbar.module.scss'
@@ -77,39 +78,61 @@ function DesktopNav() {
         <div className={styles.DesktopNavContent}>
           <nav className={styles.DesktopNavContentSocialNav}>
             <Link href="https://open.spotify.com/artist/0BFG1QbcRKPny71AbK7Xrf?si=F9vrFVYmQYOaxeYA0DW4uA">
-              <a><FontAwesomeIcon icon={["fab", "spotify"]} /></a>
+              <a className={styles.NavbarLink}>
+                <FontAwesomeIcon icon={["fab", "spotify"]} />
+              </a>
             </Link>
 
             <Link href="https://instagram.com/deepsixband">
-              <a><FontAwesomeIcon icon={["fab", "instagram"]} /></a>
+              <a className={styles.NavbarLink}>
+                <FontAwesomeIcon icon={["fab", "instagram"]} />
+              </a>
             </Link>
 
             <Link href="https://twitter.com/deepsixca">
-              <a><FontAwesomeIcon icon={["fab", "twitter"]} /></a>
+              <a className={styles.NavbarLink}>
+                <FontAwesomeIcon icon={["fab", "twitter"]} />
+              </a>
             </Link>
 
             <Link href="https://discord.gg/DD6MHeA">
-              <a><FontAwesomeIcon icon={["fab", "discord"]} /></a>
+              <a className={styles.NavbarLink}>
+                <FontAwesomeIcon icon={["fab", "discord"]} />
+              </a>
             </Link>
           </nav>
           <div className={styles.DesktopNavContentMainNav}>
             <Link href="/homepage">
-              <a>Index</a>
+              <a className={styles.NavbarLink}>Index</a>
             </Link>
 
             <Link href="/music">
-              <a>Music</a>
+              <a className={styles.NavbarLink}>Music</a>
             </Link>
 
             <Link href="/shop">
-              <a>Shop</a>
+              <a className={styles.NavbarLink}>Shop</a>
             </Link>
 
             <Link href="/checkout">
-              <a>Checkout</a>
+              <a>
+                <Cart />
+              </a>
             </Link>
           </div>
         </div>
+      </div>
+    </div>
+  )
+}
+
+function Cart() {
+  const { cartCount } = useShoppingCart()
+  return (
+    <div className={styles.Cart}>
+      <span className={`${styles.CartIcon} ${styles.NavbarLink}`}><FontAwesomeIcon icon={["fas", "shopping-cart"]} /></span>
+      <div className={styles.CartBadge}>
+        <span>{cartCount}</span>
       </div>
     </div>
   )

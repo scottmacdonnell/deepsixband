@@ -2,6 +2,13 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
 .Navbar {
   text-transform: lowercase;
+  .NavbarLink {
+    color: #f1f1f1;
+  }
+  .NavbarLink:hover {
+    transition:all 0.1s ease;
+    color: #5f5f5f;
+  }
 }
 
 .DesktopNav {
@@ -22,11 +29,7 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
         justify-content: flex-start;
         align-items: center;
         a {
-          padding: 0 0.6rem 0 0;
-        }
-        a:hover {
-          transition:all 0.1s ease;
-          color: #5f5f5f;
+          padding: 0 0.75em 0 0;
         }
       }
       .DesktopNavContentMainNav {
@@ -36,11 +39,7 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
         justify-content: flex-end;
         align-items: center;
         a {
-          padding: 0 0 0 0.75rem;
-        }
-        a:hover {
-          transition:all 0.1s ease;
-          color: #5f5f5f;
+          padding: 0 0 0 0.75em;
         }
       }
     }
@@ -174,5 +173,30 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
         margin: 0 0.5em;
       }
     }
+  }
+}
+
+.Cart {
+  height: 2em;
+  display: flex;
+  .CartIcon {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-size: 0.95em;
+  }
+  .CartBadge {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #007aff;
+    font-size: 10px;
+    font-weight: 800;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    margin: 0 0 0 1px;
   }
 }
