@@ -16,7 +16,7 @@ export default function Navbar() {
   )
 }
 
-function MobileNav(props) {
+function MobileNav() {
   const [mobileNavShown, setMobileNavShown] = useState(false)
   const toggle = () => {
     setMobileNavShown(!mobileNavShown)

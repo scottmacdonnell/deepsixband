@@ -39,16 +39,16 @@ export default function Cart() {
 
             {Object.keys(cartDetails).map((item) => {
               const cartItem = cartDetails[item]
-              const { name, description, id, quantity, price, currency, image } = cartItem
+              const { name, description, id, quantity, price, image } = cartItem
               return (
                 <div className={styles.CartContentItem}>
                   <div className={styles.CartContentItemImage}>
-                    {/* <img src={image} alt="Product Image" /> */}
                     <Image 
                       src={image}
                       alt="Product Image"
                       layout="fill"
-                      unsized
+                      width={100}
+                      height={100}
                     />
                   </div>
                   <div className={styles.CartContentItemMeta}>
@@ -95,11 +95,7 @@ function CheckoutButton() {
   const [buttonStateActive, setButtonStateActive] = useState(false)
 
   const {
-    cartDetails,
-    cartCount,
-    totalPrice,
-    incrementItem,
-    decrementItem
+    cartDetails
   } = useShoppingCart()
 
   const handleCheckout = async () => {
@@ -133,12 +129,6 @@ function CheckoutButton() {
     const result = await stripe.redirectToCheckout({
       sessionId: session.session.id,
     })
-
-    if (result.error) {
-      // If `redirectToCheckout` fails due to a browser or network
-      // error, display the localized error message to your customer
-      // using `result.error.message`.
-    }
   }
 
   return (

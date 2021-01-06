@@ -15,7 +15,6 @@ export default function FeaturedArticles() {
           {articles.map((article) => {
             const { 
               title,
-              subtitle,
               image,
               date,
               length,
@@ -32,9 +31,6 @@ export default function FeaturedArticles() {
                         src={image}
                         alt={title}
                         layout="fill"
-                        // objectFit="cover"
-                        // width={100}
-                        // height={100}
                         unsized
                       />
                     </a>

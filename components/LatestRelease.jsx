@@ -15,8 +15,7 @@ const fetcher = async (url) => {
 }
 
 export default function LatestRelease() {
-  const { data, error } = useSWR(() => `/api/spotify/get-latest-release`, fetcher)
-  if (error) return <div>{error.message}</div>
+  const { data } = useSWR(() => `/api/spotify/get-latest-release`, fetcher)
   if (!data) return <LatestReleaseSkeleton />
   const embed = `https://open.spotify.com/embed/album/${data.album.id}`
   return (

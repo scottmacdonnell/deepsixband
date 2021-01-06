@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import useSWR from 'swr'
 
 import Navbar from './Navbar'
@@ -16,8 +15,7 @@ const fetcher = async (url) => {
 }
 
 export default function Hero() {
-  const { data, error } = useSWR(() => `/api/spotify/get-artist`, fetcher)
-  if (error) return <div>{error.message}</div>
+  const { data } = useSWR(() => `/api/spotify/get-artist`, fetcher)
   if (!data) return <HeroSkeleton />
   const { artist } = data
   return (

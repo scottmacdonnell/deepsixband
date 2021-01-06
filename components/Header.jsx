@@ -15,10 +15,8 @@ const fetcher = async (url) => {
 }
 
 export default function Header({ name }) {
-  const { data, error } = useSWR(() => `/api/spotify/get-artist`, fetcher)
-  if (error) return <div>{error.message}</div>
+  const { data } = useSWR(() => `/api/spotify/get-artist`, fetcher)
   if (!data) return <HeaderSkeleton />
-  const { artist } = data
   return (
     <div className={styles.Header}>
       <Navbar />

@@ -17,9 +17,7 @@ const fetcher = async (url) => {
 export default function Releases({ amount }) {
   let display = []
   let i
-  const { data, error } = useSWR(() => `/api/spotify/get-all-releases`, fetcher)
-
-  if (error) return <div>{error.message}</div>
+  const { data } = useSWR(() => `/api/spotify/get-all-releases`, fetcher)
   if (!data) return <ReleasesSkeleton />
 
   const { releases } = data

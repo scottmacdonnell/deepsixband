@@ -14,8 +14,7 @@ const fetcher = async (url) => {
 }
 
 export default function Songkick() {
-  const { data, error } = useSWR(() => `/api/songkick/get-shows`, fetcher)
-  if (error) return <div>{error.message}</div>
+  const { data } = useSWR(() => `/api/songkick/get-shows`, fetcher)
   if (!data) return <SongkickSkeleton />
   const { shows } = data
   return (
@@ -24,8 +23,7 @@ export default function Songkick() {
         <div className={styles.SongkickContainer}>
 
           {shows.map((show) => {
-            const { 
-              date,
+            const {
               venue,
               city,
               tickets

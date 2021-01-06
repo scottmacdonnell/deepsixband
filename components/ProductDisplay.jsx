@@ -19,7 +19,7 @@ const fetcher = async (url) => {
 
 export default function ProductDisplay({ slug }) {
   
-  const { data, error } = useSWR(() => slug && `/api/product/${slug}`, fetcher)
+  const { data } = useSWR(() => slug && `/api/product/${slug}`, fetcher)
   
   if (!data) return <ProductDisplaySkeleton />
 

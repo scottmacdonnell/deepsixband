@@ -20,11 +20,9 @@ export default function Product() {
 
       <div className="Page">
         <main>
-          {/* <div className="Content"> */}
             <ProductDisplay
               slug={query.slug}
-            /> 
-          {/* </div> */}
+            />
         </main>
       </div>
       
