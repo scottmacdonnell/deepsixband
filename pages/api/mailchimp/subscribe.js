@@ -33,29 +33,4 @@ export default async (req, res) => {
     console.log(`Successfully created an audience. The audience id is ${subscribeResponse.id}.`)
     res.status(200).json({ status: "success" })
   }
-
-  
-
-  
-
-  // const subscribeData = {
-  //   email_address: email,
-  //   status: 'subscribed'
-  // }
-
-  // const subscribeResponse = await mailchimp.lists.addListMember(LIST_ID, subscribeData)
-
-  // console.log(
-  //   `Successfully created an audience. The audience id is ${subscribeResponse.id}.`
-  // )
-
-  // res.status(200).json({ status: "success" })
 }
-
-// export async function getServerSideProps(ctx) {
-  
-  
-//   return {
-//     props: {}, // will be passed to the page component as props
-//   }
-// }
