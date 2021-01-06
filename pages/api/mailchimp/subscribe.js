@@ -6,8 +6,6 @@ export default async (req, res) => {
     body: { email }
   } = req
 
-  // const email = 'test1232123@gmail.com'
-
   if (!email) {
     return res.status(400).json({ error: 'Email is required' });
   }
