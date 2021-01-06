@@ -114,8 +114,6 @@ function CheckoutButton() {
       line_items: lineItems
     }
 
-    console.log(cart)
-
     const res = await fetch(`/api/stripe/checkout-session`, {
       method: 'POST',
       headers: {
