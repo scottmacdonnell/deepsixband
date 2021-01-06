@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import useSWR from 'swr'
 
@@ -24,7 +25,14 @@ export default function LatestRelease() {
         <div className={styles.LatestReleaseContent}>
           <div className={styles.LatestReleaseContentAlbumArt}>
             <Link href={data.album.url}>
-              <a><img src={data.album.image_medium.url} alt=""/></a>
+              <a>
+                <Image 
+                  src={data.album.image_medium.url}
+                  width={300}
+                  height={300}
+                  alt={data.album.name}
+                />
+              </a>
             </Link>
             
           </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import useSWR from 'swr'
 
@@ -57,7 +58,13 @@ export default function Releases({ amount }) {
                 </Link> */}
                 <Link href={release.external_urls.spotify}>
                   <a>
-                    <img src={release.images[1].url} alt={release.name} />
+                    {/* <img src={release.images[1].url} alt={release.name} /> */}
+                    <Image 
+                      src={release.images[1].url}
+                      width={300}
+                      height={300}
+                      alt={release.name}
+                    />
                   </a>
                 </Link>
               </div>

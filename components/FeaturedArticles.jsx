@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { articles } from '../data/articles'
@@ -26,7 +27,14 @@ export default function FeaturedArticles() {
               <div className={styles.FeaturedArticlesContentArticle}>
                 <div className={styles.FeaturedArticlesContentArticleImage}>
                   <Link href={href}>
-                    <a><img src={image} alt="Article Image"/></a>
+                    <a>
+                      <Image 
+                        src={image}
+                        width={100}
+                        height={100}
+                        alt={title}
+                      />
+                    </a>
                   </Link>
                 </div>
 
