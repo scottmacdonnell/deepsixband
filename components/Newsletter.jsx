@@ -30,14 +30,14 @@ export default function Newsletter() {
 
     if (status) {
       inputEmail.current.value = ''
-      setTimeout(userSubscribeSuccess, 1000);
+      setTimeout(userSubscribeSuccess, 10);
     }
   }
 
   const userSubscribeSuccess = () => {
     setButtonStateAfter(true)
     setButtonStateActive(false)
-    setTimeout(resetButton, 10);
+    setTimeout(resetButton, 1000);
   }
 
   const resetButton = () => {
