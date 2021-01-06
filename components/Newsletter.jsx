@@ -37,7 +37,7 @@ export default function Newsletter() {
   const userSubscribeSuccess = () => {
     setButtonStateAfter(true)
     setButtonStateActive(false)
-    setTimeout(resetButton, 1000);
+    setTimeout(resetButton, 10);
   }
 
   const resetButton = () => {
