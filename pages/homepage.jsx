@@ -31,7 +31,7 @@ export default function Index() {
           <Releases amount="3" />
           {/* <Songkick /> */}
           <FeaturedArticles />
-          <Social />
+          {/* <Social /> */}
           {/* <Newsletter /> */}
         </main>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Image from 'next/image'
 import { loadStripe } from '@stripe/stripe-js'
 import { useShoppingCart } from 'use-shopping-cart'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -42,7 +43,13 @@ export default function Cart() {
               return (
                 <div className={styles.CartContentItem}>
                   <div className={styles.CartContentItemImage}>
-                    <img src={image} alt="Product Image" />
+                    {/* <img src={image} alt="Product Image" /> */}
+                    <Image 
+                      src={image}
+                      alt="Product Image"
+                      layout="fill"
+                      unsized
+                    />
                   </div>
                   <div className={styles.CartContentItemMeta}>
                     <div className={styles.CartContentItemMetaName}>

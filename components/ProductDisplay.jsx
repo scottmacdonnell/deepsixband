@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 import useSWR from 'swr'
 import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -35,7 +36,12 @@ export default function ProductDisplay({ slug }) {
       </Head>
       <div className={styles.ProductDisplayContent}>
         <div className={styles.ProductDisplayContentImage}>
-          <img src={data.image} alt="Product Image"/>
+          <Image 
+            src={data.image}
+            alt="Product Image"
+            layout="fill"
+            unsized
+          />
         </div>
 
         <div className={styles.ProductDisplayContentMeta}>
