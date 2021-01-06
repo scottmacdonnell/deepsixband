@@ -2,6 +2,7 @@ export const products = [
   {
     slug: "hollow-shirt",
     name: "Hollow T-Shirt",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 2500,
     currency: "USD",
     image: `/images/products/hollow-shirt.png`,

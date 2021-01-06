@@ -20,7 +20,7 @@ export default function ProductDisplay({ slug }) {
   
   const { data, error } = useSWR(() => slug && `/api/product/${slug}`, fetcher)
   
-  if (!data) return <p>Loading</p>
+  if (!data) return <ProductDisplaySkeleton />
 
   const price = formatCurrencyString({
     value: data.price,
@@ -41,32 +41,32 @@ export default function ProductDisplay({ slug }) {
         <div className={styles.ProductDisplayContentMeta}>
           <h1>{data.name}</h1>
           <h2>{price}</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-            laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p>{data.description}</p>
 
-          <div className={styles.ProductDisplayContentMetaProductOptions}>
-            <div class={styles.ProductDisplayContentMetaProductOptionsSelect}>
-              <select name="product-options" id="product-options">
-                {Object.keys(data.attribute).map((attribute) => {
-                  const productAttribute = data.attribute[attribute]
-                  const { value } = productAttribute
-                  return (<option value={value}>{value}</option>)
-                })}
-              </select>
+          <div className={styles.ProductDisplayContentMetaFunctions}>
+            <div className={styles.ProductDisplayContentMetaFunctionsProductOptions}>
+              <div class={styles.ProductDisplayContentMetaFunctionsProductOptionsSelect}>
+                <select name="product-options" id="product-options">
+                  {Object.keys(data.attribute).map((attribute) => {
+                    const productAttribute = data.attribute[attribute]
+                    const { value } = productAttribute
+                    return (<option value={value}>{value}</option>)
+                  })}
+                </select>
+              </div>
+
+              <div class={styles.ProductDisplayContentMetaFunctionsProductOptionsIcon}>
+                <FontAwesomeIcon icon={["fas", "chevron-down"]} />
+              </div>
             </div>
 
-            <div class={styles.ProductDisplayContentMetaProductOptionsIcon}>
-              <FontAwesomeIcon icon={["fas", "chevron-down"]} />
+            <div className={styles.ProductDisplayContentMetaFunctionsAddToCart}>
+              <AddToCart
+                data={data}
+              />
             </div>
           </div>
 
-          <div className={styles.ProductDisplayContentMetaAddToCart}>
-            <AddToCart
-              data={data}
-            />
-          </div>
         </div>
       </div>
     </div>
@@ -131,6 +131,27 @@ function AddToCart({ data }) {
           </svg>
         </div>
       </button>
+    </div>
+  )
+}
+
+function ProductDisplaySkeleton() {
+  return (
+    <div className={styles.ProductDisplaySkeleton}>
+      <div className={styles.ProductDisplaySkeletonContent}>
+        <div className={styles.ProductDisplaySkeletonContentImage}>
+          <div className={styles.ProductDisplaySkeletonContentImageSkeleton} />
+        </div>
+        <div className={styles.ProductDisplaySkeletonContentMeta}>
+          <div className={styles.ProductDisplaySkeletonContentMetaNameSkeleton}/>
+          <div className={styles.ProductDisplaySkeletonContentMetaPriceSkeleton}/>
+          <div className={styles.ProductDisplaySkeletonContentMetaDescriptionSkeleton}/>
+          <div className={styles.ProductDisplaySkeletonContentMetaFunctions}>
+            <div className={styles.ProductDisplaySkeletonContentMetaFunctionsSkeleton}/>
+            <div className={styles.ProductDisplaySkeletonContentMetaFunctionsSkeleton}/>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
