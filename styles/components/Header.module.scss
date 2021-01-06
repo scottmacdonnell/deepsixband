@@ -14,7 +14,7 @@
 .Header {
   display: table;
   width: 100%;
-  background: linear-gradient( rgba(15, 15, 15, 0.1), rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.99) ), url("/images/banner.jpeg");
+  background: linear-gradient( rgba(15, 15, 15, 0.1), rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.99) ), url("https://i.scdn.co/image/b2d1f4a96b99bcf276428fcf0383124c740c83ab");
   background-size: cover;
   background-repeat: none;
   background-position: center;
@@ -46,6 +46,28 @@
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-start;
+    }
+  }
+  @media (min-width: 540px) {
+    .HeaderContent {
+      min-height: 170px;
+      height: 30vh;
+    }
+    h1 {
+      font-size: 72px;
+      line-height: 78px;
+      margin: 0 0 0.2em 0;
+    }
+  }
+  @media (max-width: 540px) {
+    .HeaderContent {
+      min-height: 170px;
+      height: 35vh;
+    }
+    h1 {
+      font-size: 48px;
+      line-height: 52px;
+      margin: 0 0 0.2em 0;
     }
   }
 }

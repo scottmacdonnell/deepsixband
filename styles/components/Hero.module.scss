@@ -14,31 +14,23 @@
 .Hero {
   display: table;
   width: 100%;
-  background: linear-gradient( rgba(15, 15, 15, 0.1), rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.99) ), url("/images/banner.jpeg");
+  background: linear-gradient( rgba(15, 15, 15, 0.1), rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.99) ), url("https://i.scdn.co/image/b2d1f4a96b99bcf276428fcf0383124c740c83ab");
   background-size: cover;
   background-repeat: none;
   background-position: center;
-  h1 {
-    //   //Mobile: 
-    font-size: 48px;
-    line-height: 52px;
-    // Desktop:
-    // font-size: 96px;
-    // line-height: 104px;
-    letter-spacing: -2px;
-    font-weight: 800;
-    margin: 0 0 0.2em 0;
-    padding: 0;
-  }
   .HeroArtist {
     min-height: 340px;
-    height: 50vh;
+    height: 40vh;
     max-height: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 0.5em;
-    
+    h1 {
+      letter-spacing: -2px;
+      font-weight: 800;
+      padding: 0;
+    }
     .HeroArtistMeta {
       grid-area: span 1;
       height: 100%;
@@ -64,6 +56,28 @@
           stroke-width: 0.8pt;
         }
       }
+    }
+  }
+  @media (min-width: 540px) {
+    .HeroArtist {
+      min-height: 340px;
+      height: 50vh;
+    }
+    h1 {
+      font-size: 96px;
+      line-height: 104px;
+      margin: 0 0 0.2em 0;
+    }
+  }
+  @media (max-width: 540px) {
+    .HeroArtist {
+      min-height: 340px;
+      height: 50vh;
+    }
+    h1 {
+      font-size: 48px;
+      line-height: 52px;
+      margin: 0 0 0.2em 0;
     }
   }
 }
