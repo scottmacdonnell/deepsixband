@@ -19,8 +19,12 @@
     gap: 0.5em;
     .LatestReleaseContentAlbumArt {
       grid-area: span 1 / span 1;
+      max-height: 300px;
+      height: 100%;
       img {
         border-radius: 5px;
+        width: 300px;
+        height: auto;
       }
     }
     .LatestReleaseContentMeta {

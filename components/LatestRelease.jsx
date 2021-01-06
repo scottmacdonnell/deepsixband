@@ -28,9 +28,9 @@ export default function LatestRelease() {
               <a>
                 <Image 
                   src={data.album.image_medium.url}
-                  width={300}
-                  height={300}
                   alt={data.album.name}
+                  layout="fill"
+                  unsized
                 />
               </a>
             </Link>

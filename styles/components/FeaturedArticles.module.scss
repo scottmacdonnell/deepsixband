@@ -2,7 +2,7 @@
   .FeaturedArticlesContent {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: calc(100px + 1em);
+    grid-auto-rows: auto;
     gap: 0.5em;
     .FeaturedArticlesContentArticle {
       padding: 0.5em;
@@ -15,8 +15,8 @@
       border-radius: 5px;
       .FeaturedArticlesContentArticleImage {
         img {
-          width: 100%;
-          height: 100%;
+          width: 100px;
+          height: 100px;
           object-fit: cover;
           border-radius: 2px;
         }

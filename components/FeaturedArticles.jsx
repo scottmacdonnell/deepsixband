@@ -30,9 +30,12 @@ export default function FeaturedArticles() {
                     <a>
                       <Image 
                         src={image}
-                        width={100}
-                        height={100}
                         alt={title}
+                        layout="fill"
+                        // objectFit="cover"
+                        // width={100}
+                        // height={100}
+                        unsized
                       />
                     </a>
                   </Link>

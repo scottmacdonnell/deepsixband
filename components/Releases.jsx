@@ -58,12 +58,11 @@ export default function Releases({ amount }) {
                 </Link> */}
                 <Link href={release.external_urls.spotify}>
                   <a>
-                    {/* <img src={release.images[1].url} alt={release.name} /> */}
-                    <Image 
+                    <Image
                       src={release.images[1].url}
-                      width={300}
-                      height={300}
                       alt={release.name}
+                      layout="fill"
+                      unsized
                     />
                   </a>
                 </Link>
