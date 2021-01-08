@@ -1,8 +1,10 @@
 import Head from 'next/head'
 
 import Header from '../components/Header'
-import Footer from '../components/Footer'
+import LatestRelease from '../components/LatestRelease'
 import Releases from '../components/Releases'
+import Newsletter from '../components/Newsletter'
+import Footer from '../components/Footer'
 
 export default function Checkout() {
   return (
@@ -20,7 +22,9 @@ export default function Checkout() {
         </header>
 
         <main>
+          <LatestRelease />
           <Releases />
+          <Newsletter />
         </main>
 
       </div>
