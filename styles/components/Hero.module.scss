@@ -126,8 +126,15 @@
     @include LoadingAnimation();
   }
   .HeroNameSkeleton {
-    width: 175px;
-    height: 52px;
+    margin:  0 0 1rem 0;
+    @media (min-width: 540px) {
+      width: 350px;
+      height: 104px;
+    }
+    @media (max-width: 540px) {
+      width: 175px;
+      height: 52px;
+    }
     @include LoadingAnimation();
   }
   .HeroTypeSkeleton {
