@@ -30,7 +30,7 @@ export default function Newsletter() {
 
     if (status) {
       inputEmail.current.value = ''
-      setTimeout(userSubscribeSuccess, 10);
+      setTimeout(userSubscribeSuccess, 250);
     }
   }
 
