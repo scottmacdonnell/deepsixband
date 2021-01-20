@@ -102,7 +102,7 @@ function DesktopNav() {
             </Link>
           </nav>
           <div className={styles.DesktopNavContentMainNav}>
-            <Link href="/homepage">
+            <Link href="/">
               <a className={styles.NavbarLink}>Index</a>
             </Link>
 
