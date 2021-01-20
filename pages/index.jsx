@@ -1,38 +1,43 @@
 import Head from 'next/head'
 
+import Hero from '../components/Hero'
+import LatestRelease from '../components/LatestRelease'
+import Releases from '../components/Releases'
+import Songkick from '../components/Songkick'
+import FeaturedArticles from '../components/FeaturedArticles'
+import Newsletter from '../components/Newsletter'
+import Footer from '../components/Footer'
+
 export default function Index() {
-  return(
-    <div>
+  return (
+    <div className="Index">
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="deepsix is an explosive new rock band hailing from the small-town suburbs of Ontario."/>
+        <meta name="description" content="deepsix is an explosive new rock band hailing from the small-town suburbs of Ontario, Canada."/>
         <title>deepsix</title>
       </Head>
-      <style jsx>{`
-        main {
-          height: 90vh;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          background-color: #0f0f0f;
-          color: #f0f0f0;
-        }
-        footer {
-          padding: 1em 0;
-          text-align:center;
-        }
-      `}</style>
-      <main className="Landing">
-        <p>new year, we'll be back soon.</p>
-      </main>
-      <footer>
-        <div className="Content">
-          <p>listen before any of you come and attack me for mentioning the word 'soon' i'm sorry, okay? 😅</p>
-        </div>
-      </footer>
 
+      <div className="Page">
+      
+        <header>
+          <Hero />
+        </header>
+
+        <main>
+          <LatestRelease />
+          <Releases amount="3" />
+          <Songkick />
+          <FeaturedArticles />
+          {/* <ShopItems /> */}
+          {/* <Social /> */}
+          <Newsletter />
+        </main>
+
+      </div>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }
