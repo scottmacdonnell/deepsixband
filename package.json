@@ -1,30 +1,29 @@
 {
-  "name": "nextjs",
+  "name": "deepsixband.com",
+  "productName": "deepsix",
   "version": "0.1.0",
+  "description": "The website for deepsix.",
+  "repository": "https://github.com/scottmacdonnell/deepsix.git",
+  "author": "Scott MacDonnell <scottsmacdonnell@gmail.com>",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-regular-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "@mailchimp/mailchimp_marketing": "^3.0.27",
-    "@stripe/react-stripe-js": "^1.1.2",
-    "@stripe/stripe-js": "^1.11.0",
+    "@mailchimp/mailchimp_marketing": "^3.0.34",
+    "@stripe/react-stripe-js": "^1.3.0",
+    "@stripe/stripe-js": "^1.13.0",
+    "framer-motion": "^3.7.0",
     "md5": "^2.3.0",
-    "next": "10.0.0",
-    "rc-progress": "^3.1.2",
+    "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-twitter-embed": "^3.0.3",
-    "sass": "^1.30.0",
-    "stripe": "^8.129.0",
-    "swr": "^0.3.11",
-    "use-shopping-cart": "^2.3.0"
+    "sass": "^1.32.8",
+    "stripe": "^8.137.0",
+    "swr": "^0.4.2",
+    "use-shopping-cart": "^2.4.2"
   }
 }

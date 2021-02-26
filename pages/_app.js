@@ -1,19 +1,30 @@
-import { CartProvider } from 'use-shopping-cart'
-
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-library.add(far, fas, fab)
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { AnimatePresence } from 'framer-motion'
 
 import '../styles/globals.scss'
 
-function App({ Component, pageProps }) {
+function handleExitComplete() {
+  if (typeof window !== 'undefined') {
+    window.scrollTo({ top: 0 })
+  }
+}
+
+function deepsix({ Component, pageProps }) {
+  const router = useRouter()
+  
   return (
-    <CartProvider currency="USD">
-      <Component {...pageProps} />
-    </CartProvider>
+    <>
+      <Head>
+        <meta charSet="utf-8" key="charset" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
+      </Head>
+
+      <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
+    </>
   )
 }
 
-export default App
+export default deepsix

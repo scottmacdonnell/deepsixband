@@ -1,38 +1,79 @@
-import Head from 'next/head'
+import Link from 'next/link'
+
+import Page from '../components/Page'
+import Container from '../components/Container'
+
+import Banner from '../components/Banner'
+import Footer from '../components/Footer'
 
 export default function Index() {
-  return(
-    <div>
-      <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="deepsix is an explosive new rock band hailing from the small-town suburbs of Ontario."/>
-        <title>deepsix</title>
-      </Head>
-      <style jsx>{`
-        main {
-          height: 90vh;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          background-color: #0f0f0f;
-          color: #f0f0f0;
-        }
-        footer {
-          padding: 1em 0;
-          text-align:center;
-        }
-      `}</style>
-      <main className="Landing">
-        <p>new year, we'll be back soon.</p>
+  return (
+    <Page
+      className="Index"
+    >
+      <header id="header">
+        <Banner />
+      </header>
+
+      <main id="main">        
+        <Container>
+          <section id="bloodmoney">
+            <h2>bloodmoney</h2>
+            <p className="Subtitle">Our new single, out now and available on all streaming services.</p>
+            <p>
+              <Link href="https://open.spotify.com/album/0JJKdl2Kb70tw3QCUhtmh4">
+                <a className="Link" target="_blank" rel="noopener noreferrer">Spotify </a>
+              </Link>
+              <Link href="https://music.apple.com/us/album/bloodmoney-single/1534139352?uo=4">
+                <a className="Link" target="_blank" rel="noopener noreferrer"> Apple Music </a>
+              </Link>
+              <Link href="https://play.google.com/store/music/album/Deepsix_bloodmoney?id=B66rlez3pl4uwxkiejcp4v5lmdy">
+                <a className="Link" target="_blank" rel="noopener noreferrer"> YouTube </a>
+              </Link>
+              <Link href="http://www.amazon.com/gp/product/B08KJ1HDMX">
+                <a className="Link" target="_blank" rel="noopener noreferrer"> Amazon Music </a>
+              </Link>
+              <Link href="https://www.deezer.com/album/176929692">
+                <a className="Link" target="_blank" rel="noopener noreferrer"> Deezer </a>
+              </Link>
+            </p>
+          </section>
+
+          {/* <section id="tour">
+            <h2>tour dates</h2>
+
+            <p className="Subtitle">Due to lockdown restrictions, we are unable to play shows at this time.</p>
+          </section>
+
+          <section id="store">
+            <h2>merch store</h2>
+
+            <p className="Subtitle">Temporarily offline, we are just working on some new drip at the moment.</p>
+          </section> */}
+
+          <section id="contact">
+            <h2>contact</h2>
+
+            <p className="Subtitle">Any questions, inquries, concerns, we'll get back to you as soon as possible.</p>
+
+            <p>
+              <Link href="mailto:deepsixca@gmail.com">
+                <a className="Link">deepsixca@gmail.com</a>
+              </Link>
+            </p>
+          </section>
+        </Container>
       </main>
-      <footer>
-        <div className="Content">
-          <p>listen before any of you come and attack me for mentioning the word 'soon' i'm sorry, okay? 😅</p>
-        </div>
+
+      <footer id="footer">
+        <Footer />
       </footer>
 
-    </div>
+      <Container>
+        <section className="Notice">
+          <p>Okay, we're gonna get back to finishing up some new music, brb</p>
+        </section>
+      </Container>
+    </Page>
   )
 }
