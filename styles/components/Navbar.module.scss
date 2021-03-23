@@ -1,0 +1,188 @@
+@import '../breakpoints';
+
+.Navbar {
+  z-index: 999;
+  color: #ffffff;
+  padding: 1.5rem 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.NavbarContainer {
+  padding: 0;
+  max-width: $breakpointDesktop;
+  margin: 0 auto;
+  float: none;
+  @media only screen and (max-width: $breakpointMax) {
+    margin: 0 1rem;
+  }
+}
+
+.NavbarWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  svg {
+    color: inherit;
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  .NavbarLeft {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    a {
+      opacity: 100%;
+      transition: opacity 0.1s ease;
+    }
+    a:active,
+    a:hover {
+      opacity: 50%;
+    }
+    nav {
+      display: flex;
+      gap: 3px;
+      a {
+        margin-right: 3px;
+      }
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+  }
+  .NavbarRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .NavbarToggle {
+    display: block;
+    z-index: 999;
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    .NavbarToggleContainer {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      transform: rotate(0deg);
+      transition: all 0.3s;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      .NavbarToggleIcon {
+        width: 20px;
+        height: 10px;
+        position: relative;
+        display: block;
+        margin: 3px auto;
+        top: 50%;
+        .NavbarToggleTopBar {
+          width: 100%;
+          height: 1px;
+          display: block;
+          position: relative;
+          background: #ffffff;
+          transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+          transition-delay: 0s;
+          transform: translateY(0px) rotate(0deg);
+        }
+        .NavbarToggleBtmBar {
+          width: 100%;
+          height: 1px;
+          display: block;
+          position: relative;
+          background: #ffffff;
+          transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+          transition-delay: 0s;
+          transform: translateY(8px) rotate(0deg);
+        }
+      }
+    }
+  }
+  .NavbarContent {
+    display: hidden;
+    position: relative;
+    width: 100%;
+    height: 0vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0%;
+    z-index: 888;
+    transition-delay: 0.2s;
+    transition: opacity 0.25s ease;
+    .NavbarContentContainer {
+      display: hidden;
+      opacity: 0%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111111;
+      color: #fafafa;
+      .NavbarContentWrapper {
+        display: hidden;
+        max-width: $breakpointDesktop;
+        margin: 0 1rem;
+        padding: 1rem 0;
+        float: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.NavbarActive {
+  .NavbarToggle {
+    position: fixed;
+    .NavbarToggleContainer {
+      transform: rotate(90deg);
+      .NavbarToggleIcon {
+        .NavbarToggleTopBar {
+          transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+          transition-delay: 0.2s;
+          transform: translateY(6px) rotate(45deg);
+        }
+        .NavbarToggleBtmBar {
+          transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+          transition-delay: 0.2s;
+          transform: translateY(5px) rotate(-45deg);
+        }
+      }
+    }
+  }
+  .NavbarContent {
+    display: block;
+    height: 100vh;
+    max-height: -webkit-fill-available;
+    opacity: 100%;
+    transition-delay: 0.2s;
+    transition: opacity 0.25s ease;
+    .NavbarContentContainer {
+      opacity: 100%;
+    }
+  }
+}
+
+.Logo {
+  margin: 0;
+  padding: 0;
+  max-height: 3.5rem;
+  max-width: 3.5rem;
+  color: inherit;
+  path {
+    margin: 0;
+    padding: 0;
+  }
+}

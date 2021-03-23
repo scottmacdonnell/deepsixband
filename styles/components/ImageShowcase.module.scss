@@ -1,0 +1,15 @@
+@import '../breakpoints';
+
+.ImageShowcase {
+  padding: 0;
+  margin: 0 auto;
+  max-width: $breakpointDesktop;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  float: none;
+}
+
+.Image {
+  grid-area: span 1;
+}

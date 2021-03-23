@@ -1,29 +1,23 @@
 {
-  "name": "deepsixband.com",
+  "name": "deepsixband",
   "productName": "deepsix",
   "version": "0.1.0",
-  "description": "The website for deepsix.",
-  "repository": "https://github.com/scottmacdonnell/deepsix.git",
+  "description": "The website for deepsix band.",
+  "repository": "https://github.com/scottmacdonnell/deepsixband.git",
   "author": "Scott MacDonnell <scottsmacdonnell@gmail.com>",
   "private": true,
-  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "@mailchimp/mailchimp_marketing": "^3.0.34",
-    "@stripe/react-stripe-js": "^1.3.0",
-    "@stripe/stripe-js": "^1.13.0",
-    "framer-motion": "^3.7.0",
-    "md5": "^2.3.0",
-    "next": "10.0.7",
+    "framer-motion": "^4.0.0",
+    "next": "10.0.9",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "sass": "^1.32.8",
-    "stripe": "^8.137.0",
-    "swr": "^0.4.2",
-    "use-shopping-cart": "^2.4.2"
-  }
+    "swr": "^0.5.4"
+  },
+  "devDependencies": {}
 }

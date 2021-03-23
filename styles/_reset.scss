@@ -3,7 +3,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  -ms-overflow-style: none;
 }
 
 /* Remove default padding */
@@ -30,10 +29,6 @@ dd {
   margin: 0;
 }
 
-section {
-  margin: 2rem 0;
-}
-
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -49,12 +44,14 @@ ol[class] {
 }
 
 /* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Remove default anchor tag styling */
 a {
   color: inherit;
   text-decoration: none;
-}
-a:not([class]) {
-  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -66,11 +63,6 @@ img {
 /* Natural flow and rhythm in articles by default */
 article > * + * {
   margin-top: 1em;
-}
-
-button {
-  min-height: 48px;
-  min-width: 48px;
 }
 
 /* Inherit fonts for inputs and buttons */

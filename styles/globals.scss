@@ -1,46 +1,25 @@
-@import './utils/reset';
-@import './utils/typography';
-@import './utils/colors';
-
-@import './mixins/typography';
+@import './reset';
+@import './typography';
 
 html,
 body {
-  height: 100%;
-  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  background-color: $accent9;
-  color: $accent0;
+  background-color: #111111;
+  color: #ffffff;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
 }
 
 *::-webkit-scrollbar {
   display: none;
-}
-
-.Subtitle {
-  @include SecondaryHeading;
-  color: $accent2;
-}
-
-.Link {
-  @include SecondaryHeading;
-  font-weight: bold;
-  color: rgba($color: $secondaryText, $alpha: 1.0);
-  transition: all 0.1s ease;
-}
-
-.Link:hover,
-.Link:active {
-  color: rgba(255, 214, 10, 1.0);
-}
-
-.Notice {
-  padding: 2rem 0 3rem 0;
-  p {
-    color: $secondaryText;
-    text-transform: lowercase;
-  }
 }
