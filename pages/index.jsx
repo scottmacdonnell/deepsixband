@@ -42,9 +42,9 @@ export default function Index() {
       </main>
 
       <footer>
-        <Container>
+        {/* <Container>
           <Footer />
-        </Container>
+        </Container> */}
       </footer>
     </Page>
   )
