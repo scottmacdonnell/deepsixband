@@ -1,5 +1,7 @@
+@import '../breakpoints';
+
 .Tour {
-  padding: 2rem;
+  padding: 2rem 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
@@ -7,6 +9,7 @@
   h2 {
     text-transform: lowercase;
     text-align: center;
+    margin: 0;
   }
   span {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -20,6 +23,7 @@
 }
 
 .TourHeader {
+  padding: 0 0 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,10 +32,13 @@
 .TourMain {
   display: flex;
   justify-content: center;
+  span {
+    color: #58585f;
+  }
 }
 
 .TourFooter {
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -39,5 +46,86 @@
   p {
     margin: 0;
     padding: 0 0.5em;
+  }
+  a {
+    display: flex;
+    color: inherit;
+    transition: color 0.15s ease;
+  }
+  a:active,
+  a:hover {
+    color: #eaeaea;
+  }
+}
+
+.TourShows {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+  .TourShow {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    td, th {
+      display: block;
+      text-align: center;
+      padding: 1.25rem 0.5rem;
+      height: 100%;
+      @media only screen and (max-width: $breakpointMax) {
+        font-size: 14px;
+        letter-spacing: -0.2px;
+      }
+    }
+    .Date {
+      display: block;
+      width: 25%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      padding: 1.25rem 0rem;
+    }
+    .Tickets {
+      width: 25%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0;
+      button {
+        cursor: pointer;
+        background: none;
+        padding: 0.5em 1em;
+        text-align: left;
+        color: rgba($color: #58585f, $alpha: 1.0);
+        text-decoration: none;
+        border: 1px solid rgba($color: #58585f, $alpha: 1.0);
+        border-radius: 0.25rem;
+        transition: color 0.15s ease, border-color 0.15s ease;
+      }
+      button:focus {
+        outline: none;
+        box-shadow: none;
+      }
+      button:hover,
+      button:focus,
+      button:active {
+        // color: #58585f;
+        // border-color: #58585f;
+        color: rgba($color: #F1F1F1, $alpha: 1);
+        border-color: rgba($color: #F1F1F1, $alpha: 1);
+      }
+    }
+  }
+  .TourShow:nth-child(n) {
+    border-top: 0px solid #58585f;
+    border-bottom: 0.5px solid #58585f;
+  }
+  .TourShow:nth-last-child(1) {
+    border-top: 0.5px solid #58585f;
+    border-bottom: 0px solid #58585f;
   }
 }

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import useSWR from 'swr'
 
 import fetcher from '../lib/fetcher'
@@ -19,7 +20,7 @@ export default function Tour() {
         <TourHeader />
 
         <TourMain>
-          <span>We are currently unable to play shows, but we'll let you know as soon as we are able to get back on the road.</span>
+          <span>We are currently unable to play shows, but we'll let you know as soon as we are back on the road.</span>
         </TourMain>
         
         <TourFooter />
@@ -47,16 +48,23 @@ export default function Tour() {
         <TourHeader />
 
         <TourMain>
-          {shows.map((show) => {
-            return (
-              <div className={styles.TourShows}>
-                <p>{show.city}</p>
-                <p>{show.date}</p>
-                <p>{show.tickets}</p>
-                <p>{show.venue}</p>
-              </div>
-            )
-          })}
+          <table className={styles.TourShows}>
+            {shows.map((show) => {
+              return (
+                <tr className={styles.TourShow}>
+                  <td className={styles.Date}>{show.date}</td>
+                  {/* <td>{show.city}</td> */}
+                  {/* {show.tickets} */}
+                  <td>{show.venue}</td>
+                  <td className={styles.Tickets}>
+                    <Link href={show.tickets}>
+                      <button>Tickets</button>
+                    </Link>
+                  </td>
+                </tr>
+              )
+            })}
+          </table>
         </TourMain>
 
         <TourFooter />
@@ -87,7 +95,11 @@ function TourFooter() {
   return (
     <div className={styles.TourFooter}>
       <p>Powered by </p>
-      <SongkickLogo />
+      <Link href="https://www.songkick.com/artists/10109726-deepsix">
+        <a target="_blank" rel="noopener noreferrer">
+          <SongkickLogo />
+        </a>
+      </Link>
     </div>
   )
 }
