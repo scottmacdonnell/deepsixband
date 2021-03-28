@@ -12,13 +12,13 @@
 
   //Only Chrome 29+
   @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
-    height: 80vh;
-    min-height: $breakpointMedium;
+    height: 100vh;
+    min-height: 100vh;
   }
 
   // Safari
   @media screen and (min-width: $breakpointMedium) {
-    height: 80vh;
+    height: 100vh;
     max-height: -webkit-fill-available;
   }
   @media screen and (max-width: $breakpointMedium) {

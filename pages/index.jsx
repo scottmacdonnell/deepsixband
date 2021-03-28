@@ -13,9 +13,9 @@ export default function Index() {
       slug="/"
     >
       <header>
-        <Container>
+        {/* <Container>
           <Navbar />
-        </Container>
+        </Container> */}
       </header>
 
       <main>
@@ -33,9 +33,9 @@ export default function Index() {
         {/* <Merch /> */}
 
 
-        <Container>
+        {/* <Container>
           <Tour />
-        </Container>
+        </Container> */}
         
         
         

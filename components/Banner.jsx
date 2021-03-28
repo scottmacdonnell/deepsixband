@@ -43,7 +43,7 @@ export default function Banner({
               </div>
 
 
-                <div className={styles.BannerFooter}>
+                {/* <div className={styles.BannerFooter}>
                   <Link href="#main" scroll={true} shallow>
                     <a>
                       <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" shapeRendering="geometricPrecision">
@@ -51,7 +51,7 @@ export default function Banner({
                       </svg>
                     </a>
                   </Link>
-                </div>
+                </div> */}
 
               
             </div>
