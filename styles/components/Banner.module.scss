@@ -1,0 +1,274 @@
+@import '../breakpoints';
+
+@mixin ButtonLarge {
+  appearance: auto;
+  writing-mode: horizontal-tb;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: center;
+  outline: none;
+  margin: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: border-color,background,color,transform,box-shadow;
+  transition-duration: .15s;
+  transition-timing-function: ease;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 0 12px;
+  height: 48px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  min-width: 100%;
+  max-width: 100%;
+  .Prefix {
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    color: currentColor;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    box-sizing: inherit;
+    margin-right: 8px;
+    display: flex;
+  }
+
+  .Content {
+    $offset: 187;
+    $duration: 1.4s;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    color: currentColor;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    box-sizing: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+
+    .ButtonSpinnerContainer {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .ButtonSpinner {
+        display: inline;
+        width: 16px;
+        height: 16px;
+        clear: both;
+        margin: 10px auto;
+        border: 2px rgba(#f1f1f1, 0.25) solid;
+        border-top: 2px rgba(#f1f1f1, 1) solid;
+        border-radius: 50%;
+        -webkit-animation: spCircRot .6s infinite linear;
+        animation: spCircRot .6s infinite linear;
+        @-webkit-keyframes spCircRot {
+          from { -webkit-transform: rotate(0deg); }
+          to { -webkit-transform: rotate(359deg); }
+        }
+        @keyframes spCircRot {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(359deg); }
+        }
+      }
+    }
+
+    .ButtonCheck {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+
+
+.Banner {
+  color: white;
+
+  width: 100%;
+  display: table;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: border-box;
+
+  //Only Chrome 29+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+  // Safari
+  @media screen and (min-width: $breakpointMedium) {
+    height: 80vh;
+    max-height: -webkit-fill-available;
+  }
+  @media screen and (max-width: $breakpointMedium) {
+    height: 100vh;
+    max-height: -webkit-fill-available;
+  }
+}
+
+.BannerBackgroundImage {
+  width: 100%;
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.BannerContent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  h1 {
+    margin: 1rem 0;
+  }
+  span {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #F1F1F1;
+  }
+  button {
+    appearance: auto;
+    writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    outline: none;
+    margin: 1.5rem 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: border-color,background,color,transform,box-shadow;
+    transition-duration: .15s;
+    transition-timing-function: ease;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 0 18px;
+    height: 48px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #ffffff;
+    background: none;
+    border: 1px solid #fafafa;
+    .Content {
+      $offset: 187;
+      $duration: 1.4s;
+      -webkit-tap-highlight-color: transparent;
+      cursor: pointer;
+      user-select: none;
+      color: currentColor;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      box-sizing: inherit;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  button:hover,
+  button:focus,
+  button:active {
+    color: #ffffff;
+    background: #111111;
+    border: 1px solid #333333;
+  }
+  .BannerContentWrapper {
+    width: 100%;
+    height: 100%;
+    .BannerContainer {
+      padding: 0;
+      height: 100%;
+      max-width: $breakpointDesktop;
+      margin: 0 auto;
+      float: none;
+      @media only screen and (max-width: $breakpointMax) {
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+
+.BannerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5rem;
+  height: 100%;
+  .BannerMain {
+    grid-area: span 1;
+    padding-top: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .BannerFooter {
+    grid-area: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      height: 48px;
+    }
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
+
+.IndexBanner {
+  .BannerImage {
+    height: 75vh;
+    min-height: 540px;
+  }
+}

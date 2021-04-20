@@ -1,8 +1,5 @@
-@import './utils/reset';
-@import './utils/typography';
-@import './utils/colors';
-
-@import './mixins/typography';
+@import './reset';
+@import './typography';
 
 html,
 body {
@@ -12,35 +9,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  background-color: $accent9;
-  color: $accent0;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
 }
 
 *::-webkit-scrollbar {
   display: none;
 }
-
-.Subtitle {
-  @include SecondaryHeading;
-  color: $accent2;
-}
-
-.Link {
-  @include SecondaryHeading;
-  font-weight: bold;
-  color: rgba($color: $secondaryText, $alpha: 1.0);
-  transition: all 0.1s ease;
-}
-
-.Link:hover,
-.Link:active {
-  color: rgba(255, 214, 10, 1.0);
-}
-
-.Notice {
-  padding: 2rem 0 3rem 0;
-  p {
-    color: $secondaryText;
-    text-transform: lowercase;
-  }
-}
+*::-moz-selection { color: #000000; background: #ffffff; text-shadow: none; }
+*::selection { color: #000000; background: #ffffff; text-shadow: none; }

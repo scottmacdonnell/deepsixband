@@ -1,6 +1,6 @@
 module.exports = {
   target: "serverless",
   images: {
-    domains: ['i.scdn.co', 'static.wixstatic.com', 'i0.wp.com'],
+    domains: ['i.scdn.co', 'lh3.googleusercontent.com'],
   },
 }

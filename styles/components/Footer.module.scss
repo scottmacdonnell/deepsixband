@@ -1,0 +1,151 @@
+@import '../breakpoints';
+
+.Footer  {
+  padding: 3rem 0;
+  background-color: #000000;
+  color: #888888;
+}
+
+.FooterGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+}
+
+.FooterHeader {
+  display: grid;
+  gap: 2rem;
+
+  @media screen and (min-width: $breakpointMedium) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  @media screen and (max-width: $breakpointMedium) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+.FooterMain {
+  display: grid;
+  gap: 2rem;
+
+  @media screen and (min-width: $breakpointMedium) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  @media screen and (max-width: $breakpointMedium) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+.FooterNavMain,
+.FooterNavClub,
+.FooterNavLegal {
+  ul {
+    margin: 12px;
+    margin-left: 24px;
+    padding: 0;
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    list-style-type: none;
+    li {
+      box-sizing: inherit;
+      display: list-item;
+      text-align: -webkit-match-parent;
+      font-size: 1em;
+      line-height: 1.625em;
+      margin: 6px 0 0 0;
+    }
+    li::before {
+      display: none;
+    }
+  }
+}
+
+.FooterNavMain {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.FooterTagline {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 0.5rem;
+  .FooterLogo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    h4 {
+      margin: 0;
+      padding: 0;
+      margin-left: 6px;
+      font-size: 16px;
+    }
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  .FooterTag {
+    span {
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: $breakpointMedium) {
+    .FooterLogo {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      svg {
+        width: 48px;
+        height: 48px;
+      }
+    }
+    .FooterTag {
+      text-align: center;
+    }
+  }
+}
+
+.FooterSocial {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 3px;
+  a {
+    margin-left: 3px;
+    margin-right: 0px;
+  }
+  svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  @media screen and (max-width: $breakpointMedium) {
+    a {
+      margin-left: 1.5px;
+      margin-right: 1.5px;
+    }
+    grid-area: span 1 / 1 / 2 / 2;
+    justify-content: center;
+  }
+}
+
+
