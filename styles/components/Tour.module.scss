@@ -1,12 +1,11 @@
 @import '../breakpoints';
 
 .Tour {
-  padding: 2rem 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto);
-  gap: 1rem;
+  color: #888888;
+  background: #000000;
+  padding: 3rem 0;
   h2 {
+    color: #ffffff;
     text-transform: lowercase;
     text-align: center;
     margin: 0;
@@ -17,9 +16,15 @@
     font-weight: 500;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #F1F1F1;
     text-align: center;
   }
+}
+
+.TourContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 2rem;
 }
 
 .TourHeader {
@@ -31,18 +36,16 @@
 
 .TourMain {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  span {
-    color: #58585f;
-  }
 }
 
 .TourFooter {
+  color: #333333;
   padding: 1rem 0 0 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: #58585f;
   p {
     margin: 0;
     padding: 0 0.5em;
@@ -54,78 +57,63 @@
   }
   a:active,
   a:hover {
-    color: #eaeaea;
+    color: #888888;
   }
 }
 
-.TourShows {
-  border-collapse: collapse;
+.Songkick {
   width: 100%;
   height: 100%;
-  .TourShow {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
-    td, th {
-      display: block;
-      text-align: center;
-      padding: 1.25rem 0.5rem;
-      height: 100%;
-      @media only screen and (max-width: $breakpointMax) {
-        font-size: 14px;
-        letter-spacing: -0.2px;
-      }
-    }
-    .Date {
-      display: block;
-      width: 25%;
-      height: 100%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      text-align: left;
-      padding: 1.25rem 0rem;
-    }
-    .Tickets {
-      width: 25%;
-      height: 100%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 0;
-      button {
-        cursor: pointer;
-        background: none;
-        padding: 0.5em 1em;
-        text-align: left;
-        color: rgba($color: #58585f, $alpha: 1.0);
-        text-decoration: none;
-        border: 1px solid rgba($color: #58585f, $alpha: 1.0);
-        border-radius: 0.25rem;
-        transition: color 0.15s ease, border-color 0.15s ease;
-      }
-      button:focus {
-        outline: none;
-        box-shadow: none;
-      }
-      button:hover,
-      button:focus,
-      button:active {
-        // color: #58585f;
-        // border-color: #58585f;
-        color: rgba($color: #F1F1F1, $alpha: 1);
-        border-color: rgba($color: #F1F1F1, $alpha: 1);
-      }
-    }
+  padding: 2rem;
+  border-radius: 5px;
+  border: 1px solid #333333;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 2rem;
+}
+
+.Show {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 2rem;
+}
+
+.ShowDate {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.ShowVenue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ShowTickets {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  button {
+    cursor: pointer;
+    background: none;
+    padding: 0.5em 1em;
+    text-align: left;
+    color: rgba($color: #888888, $alpha: 1.0);
+    text-decoration: none;
+    border: 1px solid rgba($color: #333333, $alpha: 1.0);
+    border-radius: 0.25rem;
+    transition: color 0.15s ease, border-color 0.15s ease;
   }
-  .TourShow:nth-child(n) {
-    border-top: 0px solid #58585f;
-    border-bottom: 0.5px solid #58585f;
+  button:focus {
+    outline: none;
+    box-shadow: none;
   }
-  .TourShow:nth-last-child(1) {
-    border-top: 0.5px solid #58585f;
-    border-bottom: 0px solid #58585f;
+  button:hover,
+  button:focus,
+  button:active {
+    color: rgba($color: #ffffff, $alpha: 1);
+    border-color: rgba($color: #666666, $alpha: 1);
   }
 }

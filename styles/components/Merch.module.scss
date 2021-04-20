@@ -1,0 +1,62 @@
+@import '../breakpoints';
+
+.Merch {
+  color: #888888;
+  background: #000000;
+  padding: 3rem 0;
+  h2 {
+    color: #ffffff;
+    text-transform: lowercase;
+    text-align: center;
+    margin: 0;
+  }
+  span {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.MerchContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 2rem;
+}
+
+.MerchHeader {
+  padding: 0 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MerchMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.MerchFooter {
+  color: #333333;
+  padding: 1rem 0 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  p {
+    margin: 0;
+    padding: 0 0.5em;
+  }
+  a {
+    display: flex;
+    color: inherit;
+    transition: color 0.15s ease;
+  }
+  a:active,
+  a:hover {
+    color: #888888;
+  }
+}

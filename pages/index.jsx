@@ -1,9 +1,11 @@
 import Page from '../components/Page'
-import Container from '../components/Container'
 import Navbar from '../components/Navbar'
 import Banner from '../components/Banner'
+import ImageFeature from '../components/ImageFeature'
+import Releases from '../components/Releases'
+import Merch from '../components/Merch'
 import Tour from '../components/Tour'
-
+import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 
 export default function Index() {
@@ -13,38 +15,40 @@ export default function Index() {
       slug="/"
     >
       <header>
-        <Container>
-          <Navbar />
-        </Container>
+        <Navbar />
       </header>
 
       <main>
-        <Banner 
-          backgroundImage="/images/kero.jpg"
+        <Banner
+          backgroundImage="/images/index/banner.jpg"
           button="Pre-Save"
           link="https://distrokid.com/hyperfollow/deepsix/kerosene--hollow"
         >
           <h1>'kerosene / hollow'</h1>
-          <span>Double Single, out 23 / 04 / 2021.</span>
+          <span>The New EP, out 23 / 04 / 2021.</span>
         </Banner>
 
         <div id="main" />
 
+        <ImageFeature
+          imageSrc="/images/index/about.jpg"
+          imageRight
+        >
+          <h2>hey, we're deepsix</h2>
+          <p>- an explosive new rock band hailing from the small-town suburbs of Ontario, Canada.</p>
+        </ImageFeature>
+
+        <Releases />
+
         {/* <Merch /> */}
 
+        <Tour />
 
-        <Container>
-          <Tour />
-        </Container>
-        
-        
-        
+        <ContactForm />
       </main>
 
       <footer>
-        {/* <Container>
-          <Footer />
-        </Container> */}
+        <Footer />
       </footer>
     </Page>
   )

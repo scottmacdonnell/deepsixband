@@ -33,7 +33,7 @@ export default function Navbar() {
             </nav>
           </div>
 
-          <div className={styles.NavbarRight}>
+          {/* <div className={styles.NavbarRight}>
             <div className={styles.NavbarToggle} onClick={toggle}>
               <div className={styles.NavbarToggleContainer}>
                 <div className={styles.NavbarToggleIcon}>
@@ -42,7 +42,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className={styles.NavbarContent}>
             <div className={styles.NavbarContentContainer}>

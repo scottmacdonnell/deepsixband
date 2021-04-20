@@ -3,12 +3,12 @@
 
 html,
 body {
+  height: 100%;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  background-color: #111111;
-  color: #ffffff;
 }
 
 body {
@@ -23,3 +23,5 @@ html {
 *::-webkit-scrollbar {
   display: none;
 }
+*::-moz-selection { color: #000000; background: #ffffff; text-shadow: none; }
+*::selection { color: #000000; background: #ffffff; text-shadow: none; }

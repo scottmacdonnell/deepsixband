@@ -1,6 +1,112 @@
 @import '../breakpoints';
 
+@mixin ButtonLarge {
+  appearance: auto;
+  writing-mode: horizontal-tb;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: center;
+  outline: none;
+  margin: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: border-color,background,color,transform,box-shadow;
+  transition-duration: .15s;
+  transition-timing-function: ease;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 0 12px;
+  height: 48px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  min-width: 100%;
+  max-width: 100%;
+  .Prefix {
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    color: currentColor;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    box-sizing: inherit;
+    margin-right: 8px;
+    display: flex;
+  }
+
+  .Content {
+    $offset: 187;
+    $duration: 1.4s;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    color: currentColor;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    box-sizing: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+
+    .ButtonSpinnerContainer {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .ButtonSpinner {
+        display: inline;
+        width: 16px;
+        height: 16px;
+        clear: both;
+        margin: 10px auto;
+        border: 2px rgba(#f1f1f1, 0.25) solid;
+        border-top: 2px rgba(#f1f1f1, 1) solid;
+        border-radius: 50%;
+        -webkit-animation: spCircRot .6s infinite linear;
+        animation: spCircRot .6s infinite linear;
+        @-webkit-keyframes spCircRot {
+          from { -webkit-transform: rotate(0deg); }
+          to { -webkit-transform: rotate(359deg); }
+        }
+        @keyframes spCircRot {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(359deg); }
+        }
+      }
+    }
+
+    .ButtonCheck {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+
+
 .Banner {
+  color: white;
+
   width: 100%;
   display: table;
   position: relative;
@@ -11,9 +117,9 @@
   box-sizing: border-box;
 
   //Only Chrome 29+
-  @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
-    height: 80vh;
-    min-height: $breakpointMedium;
+  @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+    height: 100vh;
+    min-height: 100vh;
   }
 
   // Safari
@@ -45,6 +151,9 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: auto;
+  h1 {
+    margin: 1rem 0;
+  }
   span {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-size: 12px;
@@ -54,28 +163,64 @@
     color: #F1F1F1;
   }
   button {
-    cursor: pointer;
-    background: none;;
-    margin: 1.25rem;
-    padding: 0.5em 1em;
-    text-align: left;
-    color: rgba($color: #F1F1F1, $alpha: 1.0);
-    text-decoration: none;
-    border: 1px solid rgba($color: #F1F1F1, $alpha: 1.0);
-    border-radius: 0.25rem;
-    transition: color 0.15s ease, border-color 0.15s ease;
-  }
-  button:focus {
+    appearance: auto;
+    writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
     outline: none;
-    box-shadow: none;
+    margin: 1.5rem 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: border-color,background,color,transform,box-shadow;
+    transition-duration: .15s;
+    transition-timing-function: ease;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 0 18px;
+    height: 48px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #ffffff;
+    background: none;
+    border: 1px solid #fafafa;
+    .Content {
+      $offset: 187;
+      $duration: 1.4s;
+      -webkit-tap-highlight-color: transparent;
+      cursor: pointer;
+      user-select: none;
+      color: currentColor;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      box-sizing: inherit;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
   button:hover,
   button:focus,
   button:active {
-    // color: #58585f;
-    // border-color: #58585f;
-    color: rgba($color: #F1F1F1, $alpha: 0.5);
-    border-color: rgba($color: #F1F1F1, $alpha: 0.5);
+    color: #ffffff;
+    background: #111111;
+    border: 1px solid #333333;
   }
   .BannerContentWrapper {
     width: 100%;
