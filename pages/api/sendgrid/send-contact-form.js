@@ -7,7 +7,7 @@ export default async function(req, res) {
 
   const content = {
     to: process.env.NEXT_PUBLIC_EMAIL_RECIPIANT,
-    from: process.env.NEXT_PUBLIC_EMAIL_RECIPIANT,
+    from: "scott@scottmacdonnell.com",
     subject: `New Message From - ${email}`,
     templateId: 'd-b3094c335e3e477591bf86083afd300f',
     dynamicTemplateData: {
