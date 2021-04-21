@@ -33,7 +33,7 @@ export default function Index() {
           imageSrc="/images/index/about.jpg"
           imageRight
         >
-          <h2>hey, we're deepsix</h2>
+          <h2>we're deepsix</h2>
           <p>- an explosive new rock band hailing from the small-town suburbs of Ontario, Canada.</p>
         </ImageFeature>
 
