@@ -20,11 +20,11 @@ export default function Index() {
       <main>
         <Banner
           backgroundImage="/images/index/banner.jpg"
-          button="Pre-Save"
+          button="Stream Here"
           link="https://distrokid.com/hyperfollow/deepsix/kerosene--hollow"
         >
           <h1>'kerosene / hollow'</h1>
-          <span>The New EP, out 23 / 04 / 2021.</span>
+          <span>The New EP, out now.</span>
         </Banner>
 
         <div id="main" />
