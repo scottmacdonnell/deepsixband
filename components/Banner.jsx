@@ -32,9 +32,11 @@ export default function Banner({
 
                 {button ? (
                     <Link href={link}>
-                      <button>
-                        {button}
-                      </button>
+                      <a target="_blank" rel="noopener noreferrer">
+                        <button >
+                          {button}
+                        </button>
+                      </a>
                     </Link>
                   ) : (
                     <div />

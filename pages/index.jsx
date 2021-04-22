@@ -21,7 +21,7 @@ export default function Index() {
         <Banner
           backgroundImage="/images/index/banner.jpg"
           button="Stream Here"
-          link="https://distrokid.com/hyperfollow/deepsix/kerosene--hollow"
+          link="https://open.spotify.com/album/4wmsQwdwb0GhjUch19uiHQ"
         >
           <h1>'kerosene / hollow'</h1>
           <span>The New EP, out now.</span>
