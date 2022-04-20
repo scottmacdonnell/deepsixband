@@ -19,7 +19,7 @@ export default function Banner({
           alt="Background Image"
           layout="fill"
           objectFit="cover"
-          objectPosition="left"
+          objectPosition="center"
         />
       </div>
 
