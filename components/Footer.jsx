@@ -16,7 +16,7 @@ export default function Footer() {
 
         <FooterMain>
           <FooterTagline>
-            <span>© 2022 deepsix.</span>
+            <span>© 2023 deepsix.</span>
           </FooterTagline>
 
           <FooterSocial />
