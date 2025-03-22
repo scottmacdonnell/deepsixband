@@ -23,8 +23,8 @@ export default function Index() {
           button="Stream Here"
           link="https://open.spotify.com/album/4wmsQwdwb0GhjUch19uiHQ"
         >
-          <h1>198</h1>
-          <span>All new, out now.</span>
+          <h1>'kerosene / hollow'</h1>
+          <span>The New EP, out now.</span>
         </Banner>
 
         <div id="main" />
